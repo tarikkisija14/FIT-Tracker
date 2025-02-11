@@ -77,3 +77,5 @@ C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\F
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.sourcelink.json
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.Properties.Resources.resources
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmSesija.resources
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmNazivSesije.resources
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmStatistika.resources

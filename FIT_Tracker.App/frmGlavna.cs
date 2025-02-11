@@ -63,9 +63,14 @@ namespace FIT_Tracker.App
         {
             var godina = cmbGodina.SelectedItem as GodinaStudija;
             var semestar = cmbSemestar.SelectedItem as Semestar;
-            var predmet=cmbPredmet.SelectedItem as Predmet;
+            var predmet = cmbPredmet.SelectedItem as Predmet;
 
             new frmSesija(godina, semestar, predmet).ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new frmStatistika().ShowDialog();
         }
     }
 

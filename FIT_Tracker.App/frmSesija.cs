@@ -1,4 +1,6 @@
 ﻿using FIT_Timer.Data;
+using FIT_Tracker.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,8 +21,10 @@ namespace FIT_Tracker.App
         private Predmet? predmet;
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         private bool Aktivna;
-        private int sekunde;
+        private TimeSpan trajanje; 
         private System.Windows.Forms.Timer timerclose = new System.Windows.Forms.Timer();
+        FITContext _context = new FITContext();
+        private DateTime startTime;
 
         public frmSesija(GodinaStudija? godina, Semestar? semestar, Predmet? predmet)
         {
@@ -30,29 +34,39 @@ namespace FIT_Tracker.App
             this.predmet = predmet;
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
-            sekunde = 0;
+            trajanje = TimeSpan.Zero; 
             Aktivna = false;
+            startTime = DateTime.Now.Date;
 
         }
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
-            sekunde++;
+            trajanje = trajanje.Add(TimeSpan.FromSeconds(1)); 
             UpdateTimer();
         }
 
         private void UpdateTimer()
         {
-            int minute = sekunde / 60;
-            int preostalo = sekunde % 60;
-            lblTimer.Text = string.Format("{0:D2}:{1:D2}", minute, preostalo);
+            if (trajanje.Hours > 0)
+            {
+                lblTimer.Text = string.Format("{0}h {1:D2}m {2:D2}s", trajanje.Hours, trajanje.Minutes, trajanje.Seconds);
+            }
+            else if (trajanje.Minutes > 0)
+            {
+                lblTimer.Text = string.Format("{0:D2}m {1:D2}s", trajanje.Minutes, trajanje.Seconds);
+            }
+            else
+            {
+                lblTimer.Text = string.Format("{0:D2}s", trajanje.Seconds);
+            }
         }
 
         private void frmSesija_Load(object sender, EventArgs e)
         {
             lblPredmet.Text = $"{predmet.Naziv}";
-            sekunde = 0; 
-            UpdateTimer(); 
+            trajanje = TimeSpan.Zero; 
+            UpdateTimer();
 
         }
 
@@ -60,9 +74,9 @@ namespace FIT_Tracker.App
         {
             if (!Aktivna)
             {
+                startTime = DateTime.Now.Date;
                 Aktivna = true;
                 timer.Start();
-
             }
         }
 
@@ -82,11 +96,39 @@ namespace FIT_Tracker.App
                 Aktivna = false;
                 timer.Stop();
             }
-            sekunde = 0;
+
+            frmNazivSesije nazivform=new frmNazivSesije();
+
+            if(nazivform.ShowDialog() == DialogResult.OK)
+            {
+                SpremiSesiju(nazivform.Naziv);
+            }
+            else
+            {
+                trajanje = TimeSpan.Zero; 
+                UpdateTimer();
+                Task.Delay(1000).ContinueWith(_ => this.Invoke((Action)(() => this.Close())));
+                return;
+            }
+
+
+            trajanje = TimeSpan.Zero;
             UpdateTimer();
-            timerclose.Interval = 1000; 
-            timerclose.Tick += timerclose_Tick;
-            timerclose.Start();
+            Task.Delay(1000).ContinueWith(_ => this.Invoke((Action)(() => this.Close())));
+        }
+
+        private void SpremiSesiju(string naziv)
+        {
+            var nova = new Sesija
+            {
+                Naziv = naziv,
+                PredmetId = predmet.Id,
+                Trajanje = trajanje,
+                Start = startTime.Date,
+                Finish = DateTime.Now.Date
+            };
+             _context.Sesije.Add(nova);
+            _context.SaveChanges();
         }
 
         private void timerclose_Tick(object? sender, EventArgs e)
