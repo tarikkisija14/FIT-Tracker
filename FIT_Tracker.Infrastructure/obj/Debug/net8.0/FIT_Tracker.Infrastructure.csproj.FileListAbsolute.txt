@@ -1,0 +1,15 @@
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\bin\Debug\net8.0\FIT_Tracker.Infrastructure.deps.json
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\bin\Debug\net8.0\FIT_Tracker.Infrastructure.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\bin\Debug\net8.0\FIT_Tracker.Infrastructure.pdb
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\bin\Debug\net8.0\FIT_Timer.Data.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\bin\Debug\net8.0\FIT_Timer.Data.pdb
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.AssemblyInfo.cs
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Trac.DD58120E.Up2Date
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\refint\FIT_Tracker.Infrastructure.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.pdb
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\ref\FIT_Tracker.Infrastructure.dll

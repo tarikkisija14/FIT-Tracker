@@ -1,0 +1,12 @@
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\bin\Debug\net8.0\FIT_Timer.Data.deps.json
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\bin\Debug\net8.0\FIT_Timer.Data.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\bin\Debug\net8.0\FIT_Timer.Data.pdb
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.csproj.AssemblyReference.cache
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.AssemblyInfoInputs.cache
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.AssemblyInfo.cs
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.csproj.CoreCompileInputs.cache
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\refint\FIT_Timer.Data.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.pdb
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\ref\FIT_Timer.Data.dll
