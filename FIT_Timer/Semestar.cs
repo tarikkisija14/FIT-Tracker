@@ -12,5 +12,9 @@ namespace FIT_Timer.Data
         public int GodinaStudijaId {  get; set; }
         public GodinaStudija GodinaStudija { get; set; }
         public string Oznaka {  get; set; }
+        public override string ToString()
+        {
+            return Oznaka;
+        }
     }
 }

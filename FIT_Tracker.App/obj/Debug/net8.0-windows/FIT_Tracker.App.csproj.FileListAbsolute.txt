@@ -74,3 +74,6 @@ C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\F
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmGlavna.resources
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.csproj.GenerateResource.cache
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Trac.EFBA2D33.Up2Date
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.sourcelink.json
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.Properties.Resources.resources
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmSesija.resources

@@ -14,5 +14,6 @@ namespace FIT_Timer.Data
         public DateTime Start { get; set; }
         public DateTime Finish { get; set; }
         public int Trajanje {  get; set; }
+        
     }
 }

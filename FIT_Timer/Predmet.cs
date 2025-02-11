@@ -12,6 +12,10 @@ namespace FIT_Timer.Data
         public int SemestarId {  get; set; }
         public Semestar Semestar { get; set; }
         public string Naziv {  get; set; }
+        public override string ToString()
+        {
+            return Naziv;
+        }
 
     }
 }

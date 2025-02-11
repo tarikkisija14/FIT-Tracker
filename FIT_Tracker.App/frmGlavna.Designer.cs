@@ -42,17 +42,19 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
-            label1.Location = new Point(272, 27);
+            label1.Location = new Point(236, 35);
             label1.Name = "label1";
-            label1.Size = new Size(218, 54);
+            label1.Size = new Size(227, 54);
             label1.TabIndex = 0;
-            label1.Text = "Fit Tracker";
+            label1.Text = "FIT Tracker";
             // 
             // cmbGodina
             // 
@@ -61,6 +63,7 @@
             cmbGodina.Name = "cmbGodina";
             cmbGodina.Size = new Size(121, 23);
             cmbGodina.TabIndex = 1;
+            cmbGodina.SelectedIndexChanged += cmbGodina_SelectedIndexChanged;
             // 
             // cmbSemestar
             // 
@@ -69,6 +72,7 @@
             cmbSemestar.Name = "cmbSemestar";
             cmbSemestar.Size = new Size(67, 23);
             cmbSemestar.TabIndex = 2;
+            cmbSemestar.SelectedIndexChanged += cmbSemestar_SelectedIndexChanged;
             // 
             // cmbPredmet
             // 
@@ -115,12 +119,13 @@
             // 
             // button1
             // 
-            button1.Location = new Point(557, 126);
+            button1.Location = new Point(557, 125);
             button1.Name = "button1";
-            button1.Size = new Size(103, 40);
+            button1.Size = new Size(103, 42);
             button1.TabIndex = 8;
             button1.Text = "Zapocni sesiju";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -167,11 +172,23 @@
             button6.Text = "About";
             button6.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Image = Properties.Resources.logo_fit;
+            pictureBox1.Location = new Point(94, 19);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 70);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
+            // 
             // frmGlavna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(769, 320);
+            ClientSize = new Size(693, 320);
+            Controls.Add(pictureBox1);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -189,6 +206,7 @@
             Name = "frmGlavna";
             Text = "frmGlavna";
             Load += frmGlavna_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -209,5 +227,6 @@
         private Button button4;
         private Button button5;
         private Button button6;
+        private PictureBox pictureBox1;
     }
 }

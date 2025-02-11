@@ -10,3 +10,4 @@ C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\refint\FIT_Timer.Data.dll
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.pdb
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\ref\FIT_Timer.Data.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Timer\obj\Debug\net8.0\FIT_Timer.Data.sourcelink.json

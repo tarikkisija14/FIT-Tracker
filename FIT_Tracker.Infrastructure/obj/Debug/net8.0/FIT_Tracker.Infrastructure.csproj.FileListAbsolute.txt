@@ -13,3 +13,4 @@ C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\refint\FIT_Tracker.Infrastructure.dll
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.pdb
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\ref\FIT_Tracker.Infrastructure.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.Infrastructure\obj\Debug\net8.0\FIT_Tracker.Infrastructure.sourcelink.json
