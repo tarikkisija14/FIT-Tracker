@@ -119,17 +119,28 @@ namespace FIT_Tracker.App
 
         private void SpremiSesiju(string naziv)
         {
+            string trajanjeFormatted;
+
+            if (trajanje.Hours > 0)
+                trajanjeFormatted = $"{trajanje.Hours}h {trajanje.Minutes:D2}m {trajanje.Seconds:D2}s";
+            else if (trajanje.Minutes > 0)
+                trajanjeFormatted = $"{trajanje.Minutes}m {trajanje.Seconds:D2}s";
+            else
+                trajanjeFormatted = $"{trajanje.Seconds}s";
+
             var nova = new Sesija
             {
                 Naziv = naziv,
                 PredmetId = predmet.Id,
-                Trajanje = trajanje,
-                Start = startTime.Date,
-                Finish = DateTime.Now.Date
+                Trajanje = trajanjeFormatted,
+                Start = startTime,
+                Finish = DateTime.Now
             };
-             _context.Sesije.Add(nova);
+
+            _context.Sesije.Add(nova);
             _context.SaveChanges();
         }
+
 
         private void timerclose_Tick(object? sender, EventArgs e)
         {

@@ -346,6 +346,15 @@
           }
         }
       },
+      "Siticone.Desktop.UI/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Siticone.Desktop.UI.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Siticone.Desktop.UI.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
         "type": "package",
         "dependencies": {
@@ -1195,6 +1204,20 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Siticone.Desktop.UI/2.1.1": {
+      "sha512": "Ra7IVuwB11Q2yCo541FcPFmcxDyY7TSUmGg2ddbf+rNN18NrPXJ2CKMY0ZbuL+JRIig/jrJcU7ymJHfxKnEWvw==",
+      "type": "package",
+      "path": "siticone.desktop.ui/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "icon.png",
+        "lib/net40/Siticone.Desktop.UI.dll",
+        "siticone.desktop.ui.2.1.1.nupkg.sha512",
+        "siticone.desktop.ui.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
       "sha512": "UxWuisvZ3uVcVOLJQv7urM/JiQH+v3TmaJc1BLKl5Dxfm/nTzTUrqswCqg/INiYLi61AXnHo1M1JPmPqqLnAdg==",
       "type": "package",
@@ -1622,7 +1645,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "FIT_Tracker.Infrastructure >= 1.0.0"
+      "FIT_Tracker.Infrastructure >= 1.0.0",
+      "Siticone.Desktop.UI >= 2.1.1"
     ]
   },
   "packageFolders": {
@@ -1678,6 +1702,12 @@
     "frameworks": {
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "Siticone.Desktop.UI": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -1700,5 +1730,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Siticone.Desktop.UI 2.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Siticone.Desktop.UI",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

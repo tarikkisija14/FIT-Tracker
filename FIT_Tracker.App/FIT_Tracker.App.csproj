@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Siticone.Desktop.UI" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FIT_Tracker.Infrastructure\FIT_Tracker.Infrastructure.csproj" />
   </ItemGroup>
 

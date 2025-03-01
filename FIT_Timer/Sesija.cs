@@ -13,7 +13,7 @@ namespace FIT_Timer.Data
         public Predmet Predmet { get; set; }
         public DateTime Start { get; set; }
         public DateTime Finish { get; set; }
-        public TimeSpan Trajanje {  get; set; }
+        public string Trajanje {  get; set; }
         public string Naziv {  get; set; }  
         
     }

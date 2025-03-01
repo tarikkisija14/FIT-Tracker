@@ -21,12 +21,63 @@ namespace FIT_Tracker.App
         {
             InitializeComponent();
             dgvSesijePredmet.AutoGenerateColumns = false;
+            dgvSesijeSedmica.AutoGenerateColumns=false;
+            dgvSesijeMjesec.AutoGenerateColumns=false;
+            dgvSveSesije.AutoGenerateColumns = false;
         }
 
         private void frmStatistika_Load(object sender, EventArgs e)
         {
             UcitajPodatke();
+            UcitajSedmicnePodatke();
+            UcitajMjesecnePodatke();
+            UcitajSveSesije();
+            PostaviAnchorZaKontrole();
 
+        }
+
+        private void PostaviAnchorZaKontrole()
+        {
+            dgvSesijePredmet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cmbGodina.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbSemestar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbPredmet.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            
+        }
+
+
+        private void UcitajSveSesije()
+        {
+            var svesesije=_context.Sesije.ToList();
+            dgvSveSesije.DataSource = null;
+            dgvSveSesije.DataSource = svesesije;
+        }
+
+        private void UcitajMjesecnePodatke()
+        {
+            DateTime danas = DateTime.Now;
+            int trenutniMjesec = danas.Month;
+            int trenutnaGodina = danas.Year;
+
+            var mjesecneSesije = _context.Sesije
+                .Where(x => x.Start.Month == trenutniMjesec && x.Start.Year == trenutnaGodina)
+                .ToList();
+
+            dgvSesijeMjesec.DataSource = null;
+            dgvSesijeMjesec.DataSource = mjesecneSesije;
+        }
+
+        private void UcitajSedmicnePodatke()
+        {
+            DateTime danas = DateTime.Now;
+            DateTime pocetakSedmice = danas.AddDays(-(int)danas.DayOfWeek + 1); // Pon
+
+            var sedmicneSesije = _context.Sesije
+                .Where(x => x.Start >= pocetakSedmice && x.Start <= danas)
+                .ToList();
+
+            dgvSesijeSedmica.DataSource = null;
+            dgvSesijeSedmica.DataSource = sedmicneSesije;
         }
 
         private void UcitajSesijePredmet()

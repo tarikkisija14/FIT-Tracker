@@ -48,7 +48,7 @@
             FinishSedmica = new DataGridViewTextBoxColumn();
             TrajanjeSedmica = new DataGridViewTextBoxColumn();
             label6 = new Label();
-            dgvSesijeGodina = new DataGridView();
+            dgvSesijeMjesec = new DataGridView();
             NazivMjesec = new DataGridViewTextBoxColumn();
             PredmetMjesec = new DataGridViewTextBoxColumn();
             StartMjesec = new DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@
             lbl_Mjesec = new Label();
             lblPredmet = new Label();
             label7 = new Label();
-            dataGridView4 = new DataGridView();
+            dgvSveSesije = new DataGridView();
             NazivSve = new DataGridViewTextBoxColumn();
             PredmetSve = new DataGridViewTextBoxColumn();
             StartSve = new DataGridViewTextBoxColumn();
@@ -66,8 +66,8 @@
             TrajanjeSve = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvSesijePredmet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeSedmica).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvSesijeGodina).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSesijeMjesec).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSveSesije).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -200,30 +200,35 @@
             // NazivSedmica
             // 
             NazivSedmica.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            NazivSedmica.DataPropertyName = "Naziv";
             NazivSedmica.HeaderText = "Naziv";
             NazivSedmica.Name = "NazivSedmica";
             NazivSedmica.ReadOnly = true;
             // 
             // PredmetSedmica
             // 
+            PredmetSedmica.DataPropertyName = "Predmet";
             PredmetSedmica.HeaderText = "Predmet";
             PredmetSedmica.Name = "PredmetSedmica";
             PredmetSedmica.ReadOnly = true;
             // 
             // StartSedmica
             // 
+            StartSedmica.DataPropertyName = "Start";
             StartSedmica.HeaderText = "Start";
             StartSedmica.Name = "StartSedmica";
             StartSedmica.ReadOnly = true;
             // 
             // FinishSedmica
             // 
+            FinishSedmica.DataPropertyName = "Finish";
             FinishSedmica.HeaderText = "Finish";
             FinishSedmica.Name = "FinishSedmica";
             FinishSedmica.ReadOnly = true;
             // 
             // TrajanjeSedmica
             // 
+            TrajanjeSedmica.DataPropertyName = "Trajanje";
             TrajanjeSedmica.HeaderText = "Trajanje";
             TrajanjeSedmica.Name = "TrajanjeSedmica";
             TrajanjeSedmica.ReadOnly = true;
@@ -238,51 +243,57 @@
             label6.TabIndex = 17;
             label6.Text = "Sesije ovaj mjesec";
             // 
-            // dgvSesijeGodina
+            // dgvSesijeMjesec
             // 
-            dgvSesijeGodina.AllowUserToAddRows = false;
-            dgvSesijeGodina.AllowUserToDeleteRows = false;
-            dgvSesijeGodina.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSesijeGodina.Columns.AddRange(new DataGridViewColumn[] { NazivMjesec, PredmetMjesec, StartMjesec, FinishMjesec, TrajanjeMjesec });
-            dgvSesijeGodina.Location = new Point(40, 514);
-            dgvSesijeGodina.Name = "dgvSesijeGodina";
-            dgvSesijeGodina.ReadOnly = true;
-            dgvSesijeGodina.Size = new Size(571, 150);
-            dgvSesijeGodina.TabIndex = 18;
+            dgvSesijeMjesec.AllowUserToAddRows = false;
+            dgvSesijeMjesec.AllowUserToDeleteRows = false;
+            dgvSesijeMjesec.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSesijeMjesec.Columns.AddRange(new DataGridViewColumn[] { NazivMjesec, PredmetMjesec, StartMjesec, FinishMjesec, TrajanjeMjesec });
+            dgvSesijeMjesec.Location = new Point(40, 514);
+            dgvSesijeMjesec.Name = "dgvSesijeMjesec";
+            dgvSesijeMjesec.ReadOnly = true;
+            dgvSesijeMjesec.Size = new Size(571, 150);
+            dgvSesijeMjesec.TabIndex = 18;
             // 
             // NazivMjesec
             // 
             NazivMjesec.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            NazivMjesec.DataPropertyName = "Naziv";
             NazivMjesec.HeaderText = "Naziv";
             NazivMjesec.Name = "NazivMjesec";
             NazivMjesec.ReadOnly = true;
             // 
             // PredmetMjesec
             // 
+            PredmetMjesec.DataPropertyName = "Predmet";
             PredmetMjesec.HeaderText = "Predmet";
             PredmetMjesec.Name = "PredmetMjesec";
             PredmetMjesec.ReadOnly = true;
             // 
             // StartMjesec
             // 
+            StartMjesec.DataPropertyName = "Start";
             StartMjesec.HeaderText = "Start";
             StartMjesec.Name = "StartMjesec";
             StartMjesec.ReadOnly = true;
             // 
             // FinishMjesec
             // 
+            FinishMjesec.DataPropertyName = "Finish";
             FinishMjesec.HeaderText = "Finish";
             FinishMjesec.Name = "FinishMjesec";
             FinishMjesec.ReadOnly = true;
             // 
             // TrajanjeMjesec
             // 
+            TrajanjeMjesec.DataPropertyName = "Trajanje";
             TrajanjeMjesec.HeaderText = "Trajanje";
             TrajanjeMjesec.Name = "TrajanjeMjesec";
             TrajanjeMjesec.ReadOnly = true;
             // 
             // lblMjesecno
             // 
+            lblMjesecno.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblMjesecno.AutoSize = true;
             lblMjesecno.Location = new Point(412, 467);
             lblMjesecno.Name = "lblMjesecno";
@@ -292,6 +303,7 @@
             // 
             // lbl_Mjesec
             // 
+            lbl_Mjesec.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lbl_Mjesec.AutoSize = true;
             lbl_Mjesec.Location = new Point(412, 667);
             lbl_Mjesec.Name = "lbl_Mjesec";
@@ -301,6 +313,7 @@
             // 
             // lblPredmet
             // 
+            lblPredmet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblPredmet.AutoSize = true;
             lblPredmet.Location = new Point(412, 272);
             lblPredmet.Name = "lblPredmet";
@@ -318,45 +331,52 @@
             label7.TabIndex = 22;
             label7.Text = "Sve sesije";
             // 
-            // dataGridView4
+            // dgvSveSesije
             // 
-            dataGridView4.AllowUserToAddRows = false;
-            dataGridView4.AllowUserToDeleteRows = false;
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { NazivSve, PredmetSve, StartSve, FinishSve, TrajanjeSve });
-            dataGridView4.Location = new Point(629, 81);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.ReadOnly = true;
-            dataGridView4.Size = new Size(489, 583);
-            dataGridView4.TabIndex = 23;
+            dgvSveSesije.AllowUserToAddRows = false;
+            dgvSveSesije.AllowUserToDeleteRows = false;
+            dgvSveSesije.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSveSesije.Columns.AddRange(new DataGridViewColumn[] { NazivSve, PredmetSve, StartSve, FinishSve, TrajanjeSve });
+            dgvSveSesije.Location = new Point(629, 80);
+            dgvSveSesije.Name = "dgvSveSesije";
+            dgvSveSesije.ReadOnly = true;
+            dgvSveSesije.Size = new Size(489, 584);
+            dgvSveSesije.TabIndex = 23;
             // 
             // NazivSve
             // 
-            NazivSve.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            NazivSve.DataPropertyName = "Naziv";
             NazivSve.HeaderText = "Naziv";
             NazivSve.Name = "NazivSve";
             NazivSve.ReadOnly = true;
+            NazivSve.Width = 46;
             // 
             // PredmetSve
             // 
+            PredmetSve.DataPropertyName = "Predmet";
             PredmetSve.HeaderText = "Predmet";
             PredmetSve.Name = "PredmetSve";
             PredmetSve.ReadOnly = true;
             // 
             // StartSve
             // 
+            StartSve.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            StartSve.DataPropertyName = "Start";
             StartSve.HeaderText = "Start";
             StartSve.Name = "StartSve";
             StartSve.ReadOnly = true;
             // 
             // FinishSve
             // 
+            FinishSve.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            FinishSve.DataPropertyName = "Finish";
             FinishSve.HeaderText = "Finish";
             FinishSve.Name = "FinishSve";
             FinishSve.ReadOnly = true;
             // 
             // TrajanjeSve
             // 
+            TrajanjeSve.DataPropertyName = "Trajanje";
             TrajanjeSve.HeaderText = "Trajanje";
             TrajanjeSve.Name = "TrajanjeSve";
             TrajanjeSve.ReadOnly = true;
@@ -366,12 +386,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1141, 748);
-            Controls.Add(dataGridView4);
+            Controls.Add(dgvSveSesije);
             Controls.Add(label7);
             Controls.Add(lblPredmet);
             Controls.Add(lbl_Mjesec);
             Controls.Add(lblMjesecno);
-            Controls.Add(dgvSesijeGodina);
+            Controls.Add(dgvSesijeMjesec);
             Controls.Add(label6);
             Controls.Add(dgvSesijeSedmica);
             Controls.Add(label5);
@@ -384,12 +404,12 @@
             Controls.Add(cmbSemestar);
             Controls.Add(cmbGodina);
             Name = "frmStatistika";
-            Text = "frmStatistika";
+            Text = "Statistika";
             Load += frmStatistika_Load;
             ((System.ComponentModel.ISupportInitialize)dgvSesijePredmet).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeSedmica).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvSesijeGodina).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSesijeMjesec).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSveSesije).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -407,12 +427,16 @@
         private Label label5;
         private DataGridView dgvSesijeSedmica;
         private Label label6;
-        private DataGridView dgvSesijeGodina;
+        private DataGridView dgvSesijeMjesec;
         private Label lblMjesecno;
         private Label lbl_Mjesec;
         private Label lblPredmet;
         private Label label7;
-        private DataGridView dataGridView4;
+        private DataGridView dgvSveSesije;
+        private DataGridViewTextBoxColumn Naziv;
+        private DataGridViewTextBoxColumn Start;
+        private DataGridViewTextBoxColumn Finish;
+        private DataGridViewTextBoxColumn Trajanje;
         private DataGridViewTextBoxColumn NazivSedmica;
         private DataGridViewTextBoxColumn PredmetSedmica;
         private DataGridViewTextBoxColumn StartSedmica;
@@ -428,9 +452,5 @@
         private DataGridViewTextBoxColumn StartSve;
         private DataGridViewTextBoxColumn FinishSve;
         private DataGridViewTextBoxColumn TrajanjeSve;
-        private DataGridViewTextBoxColumn Naziv;
-        private DataGridViewTextBoxColumn Start;
-        private DataGridViewTextBoxColumn Finish;
-        private DataGridViewTextBoxColumn Trajanje;
     }
 }
