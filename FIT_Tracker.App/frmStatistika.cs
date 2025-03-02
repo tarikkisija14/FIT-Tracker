@@ -23,7 +23,7 @@ namespace FIT_Tracker.App
             dgvSesijePredmet.AutoGenerateColumns = false;
             dgvSesijeSedmica.AutoGenerateColumns=false;
             dgvSesijeMjesec.AutoGenerateColumns=false;
-            dgvSveSesije.AutoGenerateColumns = false;
+            //dgvSveSesije.AutoGenerateColumns = false;
         }
 
         private void frmStatistika_Load(object sender, EventArgs e)
@@ -49,8 +49,8 @@ namespace FIT_Tracker.App
         private void UcitajSveSesije()
         {
             var svesesije=_context.Sesije.ToList();
-            dgvSveSesije.DataSource = null;
-            dgvSveSesije.DataSource = svesesije;
+            //dgvSveSesije.DataSource = null;
+            //dgvSveSesije.DataSource = svesesije;
         }
 
         private void UcitajMjesecnePodatke()

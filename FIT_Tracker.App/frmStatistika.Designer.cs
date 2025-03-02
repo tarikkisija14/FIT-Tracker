@@ -57,17 +57,10 @@
             lblMjesecno = new Label();
             lbl_Mjesec = new Label();
             lblPredmet = new Label();
-            label7 = new Label();
-            dgvSveSesije = new DataGridView();
-            NazivSve = new DataGridViewTextBoxColumn();
-            PredmetSve = new DataGridViewTextBoxColumn();
-            StartSve = new DataGridViewTextBoxColumn();
-            FinishSve = new DataGridViewTextBoxColumn();
-            TrajanjeSve = new DataGridViewTextBoxColumn();
+            btnSve = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvSesijePredmet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeSedmica).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeMjesec).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvSveSesije).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -99,6 +92,9 @@
             // 
             // cmbPredmet
             // 
+            cmbPredmet.BackColor = Color.White;
+            cmbPredmet.FlatStyle = FlatStyle.Flat;
+            cmbPredmet.ForeColor = Color.Black;
             cmbPredmet.FormattingEnabled = true;
             cmbPredmet.Location = new Point(271, 80);
             cmbPredmet.Name = "cmbPredmet";
@@ -108,6 +104,9 @@
             // 
             // cmbSemestar
             // 
+            cmbSemestar.BackColor = Color.White;
+            cmbSemestar.FlatStyle = FlatStyle.Flat;
+            cmbSemestar.ForeColor = Color.Black;
             cmbSemestar.FormattingEnabled = true;
             cmbSemestar.Location = new Point(182, 81);
             cmbSemestar.Name = "cmbSemestar";
@@ -117,6 +116,9 @@
             // 
             // cmbGodina
             // 
+            cmbGodina.BackColor = Color.White;
+            cmbGodina.FlatStyle = FlatStyle.Flat;
+            cmbGodina.ForeColor = Color.Black;
             cmbGodina.FormattingEnabled = true;
             cmbGodina.Location = new Point(40, 81);
             cmbGodina.Name = "cmbGodina";
@@ -128,12 +130,14 @@
             // 
             dgvSesijePredmet.AllowUserToAddRows = false;
             dgvSesijePredmet.AllowUserToDeleteRows = false;
+            dgvSesijePredmet.BackgroundColor = Color.White;
             dgvSesijePredmet.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSesijePredmet.Columns.AddRange(new DataGridViewColumn[] { Naziv, Start, Finish, Trajanje });
+            dgvSesijePredmet.GridColor = Color.FromArgb(224, 224, 224);
             dgvSesijePredmet.Location = new Point(40, 119);
             dgvSesijePredmet.Name = "dgvSesijePredmet";
             dgvSesijePredmet.ReadOnly = true;
-            dgvSesijePredmet.Size = new Size(571, 150);
+            dgvSesijePredmet.Size = new Size(684, 150);
             dgvSesijePredmet.TabIndex = 13;
             // 
             // Naziv
@@ -189,12 +193,14 @@
             // 
             dgvSesijeSedmica.AllowUserToAddRows = false;
             dgvSesijeSedmica.AllowUserToDeleteRows = false;
+            dgvSesijeSedmica.BackgroundColor = Color.White;
             dgvSesijeSedmica.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSesijeSedmica.Columns.AddRange(new DataGridViewColumn[] { NazivSedmica, PredmetSedmica, StartSedmica, FinishSedmica, TrajanjeSedmica });
+            dgvSesijeSedmica.GridColor = Color.FromArgb(224, 224, 224);
             dgvSesijeSedmica.Location = new Point(40, 314);
             dgvSesijeSedmica.Name = "dgvSesijeSedmica";
             dgvSesijeSedmica.ReadOnly = true;
-            dgvSesijeSedmica.Size = new Size(571, 150);
+            dgvSesijeSedmica.Size = new Size(684, 150);
             dgvSesijeSedmica.TabIndex = 16;
             // 
             // NazivSedmica
@@ -247,12 +253,14 @@
             // 
             dgvSesijeMjesec.AllowUserToAddRows = false;
             dgvSesijeMjesec.AllowUserToDeleteRows = false;
+            dgvSesijeMjesec.BackgroundColor = Color.White;
             dgvSesijeMjesec.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSesijeMjesec.Columns.AddRange(new DataGridViewColumn[] { NazivMjesec, PredmetMjesec, StartMjesec, FinishMjesec, TrajanjeMjesec });
+            dgvSesijeMjesec.GridColor = Color.FromArgb(224, 224, 224);
             dgvSesijeMjesec.Location = new Point(40, 514);
             dgvSesijeMjesec.Name = "dgvSesijeMjesec";
             dgvSesijeMjesec.ReadOnly = true;
-            dgvSesijeMjesec.Size = new Size(571, 150);
+            dgvSesijeMjesec.Size = new Size(684, 150);
             dgvSesijeMjesec.TabIndex = 18;
             // 
             // NazivMjesec
@@ -295,7 +303,7 @@
             // 
             lblMjesecno.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblMjesecno.AutoSize = true;
-            lblMjesecno.Location = new Point(412, 467);
+            lblMjesecno.Location = new Point(511, 467);
             lblMjesecno.Name = "lblMjesecno";
             lblMjesecno.Size = new Size(38, 15);
             lblMjesecno.TabIndex = 19;
@@ -305,7 +313,7 @@
             // 
             lbl_Mjesec.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lbl_Mjesec.AutoSize = true;
-            lbl_Mjesec.Location = new Point(412, 667);
+            lbl_Mjesec.Location = new Point(511, 667);
             lbl_Mjesec.Name = "lbl_Mjesec";
             lbl_Mjesec.Size = new Size(38, 15);
             lbl_Mjesec.TabIndex = 20;
@@ -315,79 +323,28 @@
             // 
             lblPredmet.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblPredmet.AutoSize = true;
-            lblPredmet.Location = new Point(412, 272);
+            lblPredmet.Location = new Point(511, 272);
             lblPredmet.Name = "lblPredmet";
             lblPredmet.Size = new Size(38, 15);
             lblPredmet.TabIndex = 21;
             lblPredmet.Text = "label7";
             // 
-            // label7
+            // btnSve
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label7.Location = new Point(629, 34);
-            label7.Name = "label7";
-            label7.Size = new Size(83, 21);
-            label7.TabIndex = 22;
-            label7.Text = "Sve sesije";
-            // 
-            // dgvSveSesije
-            // 
-            dgvSveSesije.AllowUserToAddRows = false;
-            dgvSveSesije.AllowUserToDeleteRows = false;
-            dgvSveSesije.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSveSesije.Columns.AddRange(new DataGridViewColumn[] { NazivSve, PredmetSve, StartSve, FinishSve, TrajanjeSve });
-            dgvSveSesije.Location = new Point(629, 80);
-            dgvSveSesije.Name = "dgvSveSesije";
-            dgvSveSesije.ReadOnly = true;
-            dgvSveSesije.Size = new Size(489, 584);
-            dgvSveSesije.TabIndex = 23;
-            // 
-            // NazivSve
-            // 
-            NazivSve.DataPropertyName = "Naziv";
-            NazivSve.HeaderText = "Naziv";
-            NazivSve.Name = "NazivSve";
-            NazivSve.ReadOnly = true;
-            NazivSve.Width = 46;
-            // 
-            // PredmetSve
-            // 
-            PredmetSve.DataPropertyName = "Predmet";
-            PredmetSve.HeaderText = "Predmet";
-            PredmetSve.Name = "PredmetSve";
-            PredmetSve.ReadOnly = true;
-            // 
-            // StartSve
-            // 
-            StartSve.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            StartSve.DataPropertyName = "Start";
-            StartSve.HeaderText = "Start";
-            StartSve.Name = "StartSve";
-            StartSve.ReadOnly = true;
-            // 
-            // FinishSve
-            // 
-            FinishSve.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            FinishSve.DataPropertyName = "Finish";
-            FinishSve.HeaderText = "Finish";
-            FinishSve.Name = "FinishSve";
-            FinishSve.ReadOnly = true;
-            // 
-            // TrajanjeSve
-            // 
-            TrajanjeSve.DataPropertyName = "Trajanje";
-            TrajanjeSve.HeaderText = "Trajanje";
-            TrajanjeSve.Name = "TrajanjeSve";
-            TrajanjeSve.ReadOnly = true;
+            btnSve.Location = new Point(626, 23);
+            btnSve.Name = "btnSve";
+            btnSve.Size = new Size(98, 32);
+            btnSve.TabIndex = 22;
+            btnSve.Text = "Sve sesije";
+            btnSve.UseVisualStyleBackColor = true;
             // 
             // frmStatistika
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1141, 748);
-            Controls.Add(dgvSveSesije);
-            Controls.Add(label7);
+            BackColor = Color.WhiteSmoke;
+            ClientSize = new Size(754, 748);
+            Controls.Add(btnSve);
             Controls.Add(lblPredmet);
             Controls.Add(lbl_Mjesec);
             Controls.Add(lblMjesecno);
@@ -409,7 +366,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvSesijePredmet).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeSedmica).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeMjesec).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvSveSesije).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -431,8 +387,6 @@
         private Label lblMjesecno;
         private Label lbl_Mjesec;
         private Label lblPredmet;
-        private Label label7;
-        private DataGridView dgvSveSesije;
         private DataGridViewTextBoxColumn Naziv;
         private DataGridViewTextBoxColumn Start;
         private DataGridViewTextBoxColumn Finish;
@@ -447,10 +401,6 @@
         private DataGridViewTextBoxColumn StartMjesec;
         private DataGridViewTextBoxColumn FinishMjesec;
         private DataGridViewTextBoxColumn TrajanjeMjesec;
-        private DataGridViewTextBoxColumn NazivSve;
-        private DataGridViewTextBoxColumn PredmetSve;
-        private DataGridViewTextBoxColumn StartSve;
-        private DataGridViewTextBoxColumn FinishSve;
-        private DataGridViewTextBoxColumn TrajanjeSve;
+        private Button btnSve;
     }
 }

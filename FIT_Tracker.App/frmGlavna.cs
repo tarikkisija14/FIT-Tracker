@@ -29,7 +29,7 @@ namespace FIT_Tracker.App
 
 
 
-        
+
 
 
         private void UcitajPodatke()
@@ -39,7 +39,7 @@ namespace FIT_Tracker.App
 
         }
 
-      
+
 
         private void cmbGodina_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -84,6 +84,11 @@ namespace FIT_Tracker.App
             var predmet = cmbPredmet.SelectedItem as Predmet;
 
             new frmSesija(godina, semestar, predmet).ShowDialog();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            new frmStatistika().ShowDialog();
         }
     }
 
