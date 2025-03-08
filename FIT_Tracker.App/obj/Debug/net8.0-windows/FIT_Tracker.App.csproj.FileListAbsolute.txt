@@ -80,3 +80,4 @@ C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\F
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmNazivSesije.resources
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmStatistika.resources
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\Siticone.Desktop.UI.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmSveSesije.resources

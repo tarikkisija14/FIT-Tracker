@@ -90,6 +90,11 @@ namespace FIT_Tracker.App
         {
             new frmStatistika().ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

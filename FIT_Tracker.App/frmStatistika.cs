@@ -21,8 +21,8 @@ namespace FIT_Tracker.App
         {
             InitializeComponent();
             dgvSesijePredmet.AutoGenerateColumns = false;
-            dgvSesijeSedmica.AutoGenerateColumns=false;
-            dgvSesijeMjesec.AutoGenerateColumns=false;
+            dgvSesijeSedmica.AutoGenerateColumns = false;
+            dgvSesijeMjesec.AutoGenerateColumns = false;
             //dgvSveSesije.AutoGenerateColumns = false;
         }
 
@@ -42,13 +42,13 @@ namespace FIT_Tracker.App
             cmbGodina.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cmbSemestar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cmbPredmet.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            
+
         }
 
 
         private void UcitajSveSesije()
         {
-            var svesesije=_context.Sesije.ToList();
+            var svesesije = _context.Sesije.ToList();
             //dgvSveSesije.DataSource = null;
             //dgvSveSesije.DataSource = svesesije;
         }
@@ -87,7 +87,7 @@ namespace FIT_Tracker.App
             {
                 var sesije = _context.Sesije.Where(x => x.PredmetId == predmet.Id).ToList();
 
-               
+
 
 
                 dgvSesijePredmet.DataSource = null;
@@ -133,8 +133,9 @@ namespace FIT_Tracker.App
             UcitajSesijePredmet();
         }
 
-        
-
-
+        private void btnSve_Click(object sender, EventArgs e)
+        {
+            new frmSveSesije().ShowDialog();
+        }
     }
 }

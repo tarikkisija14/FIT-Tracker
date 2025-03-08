@@ -337,6 +337,7 @@
             btnSve.TabIndex = 22;
             btnSve.Text = "Sve sesije";
             btnSve.UseVisualStyleBackColor = true;
+            btnSve.Click += btnSve_Click;
             // 
             // frmStatistika
             // 
