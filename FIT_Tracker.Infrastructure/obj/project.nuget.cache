@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CItJ3NoTw0I=",
+  "dgSpecHash": "PMFVlUwy7Fo=",
   "success": true,
   "projectFilePath": "C:\\Users\\tarik\\source\\repos\\FIT_Timer\\FIT_Tracker.Infrastructure\\FIT_Tracker.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -36,9 +36,9 @@
     "C:\\Users\\tarik\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.1\\system.security.cryptography.protecteddata.9.0.1.nupkg.sha512",
     "C:\\Users\\tarik\\.nuget\\packages\\system.text.encodings.web\\9.0.1\\system.text.encodings.web.9.0.1.nupkg.sha512",
     "C:\\Users\\tarik\\.nuget\\packages\\system.text.json\\9.0.1\\system.text.json.9.0.1.nupkg.sha512",
-    "C:\\Users\\tarik\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.13\\microsoft.windowsdesktop.app.ref.8.0.13.nupkg.sha512",
-    "C:\\Users\\tarik\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.13\\microsoft.netcore.app.ref.8.0.13.nupkg.sha512",
-    "C:\\Users\\tarik\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.13\\microsoft.aspnetcore.app.ref.8.0.13.nupkg.sha512"
+    "C:\\Users\\tarik\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.14\\microsoft.windowsdesktop.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\tarik\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.14\\microsoft.netcore.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\tarik\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.14\\microsoft.aspnetcore.app.ref.8.0.14.nupkg.sha512"
   ],
   "logs": []
 }

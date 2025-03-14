@@ -33,7 +33,147 @@ namespace FIT_Tracker.App
             UcitajMjesecnePodatke();
             UcitajSveSesije();
             PostaviAnchorZaKontrole();
+            PrikaziProsjekSedmica();
+            PrikaziUkupnoSedmica();
+            PrikaziProsjekMjesec();
+            PrikaziUkupnoMjesec();
 
+        }
+
+        private void PrikaziUkupnoMjesec()
+        {
+            DateTime danas = DateTime.Now;
+            int trenutniMjesec = danas.Month;
+            int trenutnaGodina = danas.Year;
+
+            var mjesecneSesije = _context.Sesije
+                .Where(x => x.Start.Month == trenutniMjesec && x.Start.Year == trenutnaGodina)
+                .ToList();
+
+            var trajanja = mjesecneSesije
+                .Select(x => ParseTrajanje(x.Trajanje))
+                .Where(x => x.HasValue)
+                .Select(x => x.Value)
+                .ToList();
+
+            if (trajanja.Count > 0)
+            {
+                int ukupnoSekundi = trajanja.Sum();
+                int sati = ukupnoSekundi / 3600;
+                int minute = (ukupnoSekundi % 3600) / 60;
+                int sekunde = ukupnoSekundi % 60;
+
+                if (sati > 0)
+                    lblMjesecUkupno.Text = $"Ukupno vrijeme (mjesec): {sati}h {minute:D2}m {sekunde:D2}s";
+                else if (minute > 0)
+                    lblMjesecUkupno.Text = $"Ukupno vrijeme (mjesec): {minute}m {sekunde:D2}s";
+                else
+                    lblMjesecUkupno.Text = $"Ukupno vrijeme (mjesec): {sekunde}s";
+            }
+            else
+            {
+                lblMjesecUkupno.Text = "Nema podataka za ovaj mjesec.";
+            }
+        }
+
+        private void PrikaziProsjekMjesec()
+        {
+            DateTime danas = DateTime.Now;
+            int trenutniMjesec = danas.Month;
+            int trenutnaGodina = danas.Year;
+
+            var mjesecneSesije = _context.Sesije
+                .Where(x => x.Start.Month == trenutniMjesec && x.Start.Year == trenutnaGodina)
+                .ToList();
+
+            var trajanja = mjesecneSesije
+                .Select(x => ParseTrajanje(x.Trajanje))
+                .Where(x => x.HasValue)
+                .Select(x => x.Value)
+                .ToList();
+
+            if (trajanja.Count > 0)
+            {
+                double prosjecnoTrajanje = trajanja.Average();
+                int minute = (int)(prosjecnoTrajanje / 60);
+                int sekunde = (int)(prosjecnoTrajanje % 60);
+
+                if (minute > 0)
+                    lblMjesec.Text = $"Prosječno vrijeme (mjesec): {minute}m {sekunde:D2}s";
+                else
+                    lblMjesec.Text = $"Prosječno vrijeme (mjesec): {sekunde}s";
+            }
+            else
+            {
+                lblMjesec.Text = "Nema podataka za ovaj mjesec.";
+            }
+        }
+
+        private void PrikaziUkupnoSedmica()
+        {
+            DateTime danas = DateTime.Now;
+            DateTime pocetakSedmice = danas.AddDays(-(int)danas.DayOfWeek + 1); // Pon
+
+            var sedmicneSesije = _context.Sesije
+                .Where(x => x.Start >= pocetakSedmice && x.Start <= danas)
+                .ToList();
+
+            var trajanja = sedmicneSesije
+                .Select(x => ParseTrajanje(x.Trajanje))
+                .Where(x => x.HasValue)
+                .Select(x => x.Value)
+                .ToList();
+
+            if (trajanja.Count > 0)
+            {
+                int ukupnoSekundi = trajanja.Sum();
+                int sati = ukupnoSekundi / 3600;
+                int minute = (ukupnoSekundi % 3600) / 60;
+                int sekunde = ukupnoSekundi % 60;
+
+                if (sati > 0)
+                    lblSedmicnoUkupno.Text = $"Ukupno vrijeme (sedmica): {sati}h {minute:D2}m {sekunde:D2}s";
+                else if (minute > 0)
+                    lblSedmicnoUkupno.Text = $"Ukupno vrijeme (sedmica): {minute}m {sekunde:D2}s";
+                else
+                    lblSedmicnoUkupno.Text = $"Ukupno vrijeme (sedmica): {sekunde}s";
+            }
+            else
+            {
+                lblSedmicnoUkupno.Text = "Nema podataka za ovu sedmicu.";
+            }
+        }
+
+        private void PrikaziProsjekSedmica()
+        {
+            DateTime danas = DateTime.Now;
+            DateTime pocetakSedmice = danas.AddDays(-(int)danas.DayOfWeek + 1); // Pon
+
+            var sedmicneSesije = _context.Sesije
+                .Where(x => x.Start >= pocetakSedmice && x.Start <= danas)
+                .ToList();
+
+            var trajanja = sedmicneSesije
+                .Select(x => ParseTrajanje(x.Trajanje))
+                .Where(x => x.HasValue)
+                .Select(x => x.Value)
+                .ToList();
+
+            if (trajanja.Count > 0)
+            {
+                double prosjecnoTrajanje = trajanja.Average();
+                int minute = (int)(prosjecnoTrajanje / 60);
+                int sekunde = (int)(prosjecnoTrajanje % 60);
+
+                if (minute > 0)
+                    lblSedmicno.Text = $"Prosječno vrijeme (sedmica): {minute}m {sekunde:D2}s";
+                else
+                    lblSedmicno.Text = $"Prosječno vrijeme (sedmica): {sekunde}s";
+            }
+            else
+            {
+                lblSedmicno.Text = "Nema podataka za ovu sedmicu.";
+            }
         }
 
         private void PostaviAnchorZaKontrole()
@@ -131,11 +271,110 @@ namespace FIT_Tracker.App
         private void cmbPredmet_SelectedIndexChanged(object sender, EventArgs e)
         {
             UcitajSesijePredmet();
+            PrikaziProsjekPredmet();
+            PrikaziUkupno();
         }
+
+        private void PrikaziUkupno()
+        {
+            var predmet = cmbPredmet.SelectedItem as Predmet;
+            if (predmet != null)
+            {
+                var sesije = _context.Sesije.Where(x => x.PredmetId == predmet.Id).ToList();
+
+                var trajanja = sesije
+                    .Select(x => ParseTrajanje(x.Trajanje))
+                    .Where(x => x.HasValue)
+                    .Select(x => x.Value)
+                    .ToList();
+
+                if (trajanja.Count > 0)
+                {
+                    int ukupnoSekundi = trajanja.Sum();
+                    int sati = ukupnoSekundi / 3600;
+                    int minute = (ukupnoSekundi % 3600) / 60;
+                    int sekunde = ukupnoSekundi % 60;
+
+                    if (sati > 0)
+                        lblUkupnoPredmet.Text = $"Ukupno vrijeme: {sati}h {minute:D2}m {sekunde:D2}s";
+                    else if (minute > 0)
+                        lblUkupnoPredmet.Text = $"Ukupno vrijeme: {minute}m {sekunde:D2}s";
+                    else
+                        lblUkupnoPredmet.Text = $"Ukupno vrijeme: {sekunde}s";
+                }
+                else
+                {
+                    lblUkupnoPredmet.Text = "Nema podataka za ovaj predmet.";
+                }
+            }
+        }
+
+        private void PrikaziProsjekPredmet()
+        {
+            var predmet = cmbPredmet.SelectedItem as Predmet;
+            if (predmet != null)
+            {
+                var sesije=_context.Sesije.Where(x=>x.PredmetId == predmet.Id).ToList();
+
+                var trajanja = sesije
+                .Select(x => ParseTrajanje(x.Trajanje))
+                .Where(x => x.HasValue)
+                .Select(x => x.Value)
+                .ToList();
+
+                if (trajanja.Count > 0)
+                {
+                    double prosjecnoTrajanje = trajanja.Average(); 
+                    int minute = (int)(prosjecnoTrajanje / 60);
+                    int sekunde = (int)(prosjecnoTrajanje % 60);
+
+                    if (minute > 0)
+                        lblPredmet.Text = $"Prosječno vrijeme: {minute}m {sekunde:D2}s";
+                    else
+                        lblPredmet.Text = $"Prosječno vrijeme: {sekunde}s";
+                }
+                else
+                {
+                    lblPredmet.Text = "Nema podataka za ovaj predmet.";
+                }
+
+
+            }
+        }
+
+        private int? ParseTrajanje(string trajanje)
+        {
+            if (string.IsNullOrWhiteSpace(trajanje))
+                return null;
+
+            int ukupnoSekundi = 0;
+            int sati = 0, minute = 0, sekunde = 0;
+
+            var parts = trajanje.Split(' ');
+
+            foreach (var part in parts)
+            {
+                if (part.EndsWith("h") && int.TryParse(part.TrimEnd('h'), out int h))
+                    sati = h;
+                else if (part.EndsWith("m") && int.TryParse(part.TrimEnd('m'), out int m))
+                    minute = m;
+                else if (part.EndsWith("s") && int.TryParse(part.TrimEnd('s'), out int s))
+                    sekunde = s;
+            }
+
+            ukupnoSekundi = (sati * 3600) + (minute * 60) + sekunde;
+            return ukupnoSekundi;
+        }
+
 
         private void btnSve_Click(object sender, EventArgs e)
         {
             new frmSveSesije().ShowDialog();
+        }
+
+        private void lblPredmet_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
