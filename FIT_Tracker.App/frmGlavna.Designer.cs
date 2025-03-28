@@ -38,13 +38,11 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
@@ -53,10 +51,10 @@
             // 
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(44, 62, 80);
-            label1.Location = new Point(139, 37);
+            label1.Location = new Point(121, 37);
             label1.Margin = new Padding(0);
             label1.Name = "label1";
-            label1.Size = new Size(193, 60);
+            label1.Size = new Size(190, 60);
             label1.TabIndex = 0;
             label1.Text = "FIT Tracker";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -72,7 +70,7 @@
             cmbGodina.FormattingEnabled = true;
             cmbGodina.Location = new Point(29, 130);
             cmbGodina.Name = "cmbGodina";
-            cmbGodina.Size = new Size(166, 29);
+            cmbGodina.Size = new Size(122, 29);
             cmbGodina.TabIndex = 1;
             cmbGodina.SelectedIndexChanged += cmbGodina_SelectedIndexChanged;
             // 
@@ -84,9 +82,9 @@
             cmbSemestar.Font = new Font("Segoe UI", 12F);
             cmbSemestar.ForeColor = Color.Black;
             cmbSemestar.FormattingEnabled = true;
-            cmbSemestar.Location = new Point(206, 130);
+            cmbSemestar.Location = new Point(157, 130);
             cmbSemestar.Name = "cmbSemestar";
-            cmbSemestar.Size = new Size(126, 29);
+            cmbSemestar.Size = new Size(134, 29);
             cmbSemestar.TabIndex = 2;
             cmbSemestar.SelectedIndexChanged += cmbSemestar_SelectedIndexChanged;
             // 
@@ -100,7 +98,7 @@
             cmbPredmet.FormattingEnabled = true;
             cmbPredmet.Location = new Point(29, 182);
             cmbPredmet.Name = "cmbPredmet";
-            cmbPredmet.Size = new Size(303, 29);
+            cmbPredmet.Size = new Size(262, 29);
             cmbPredmet.TabIndex = 3;
             // 
             // label2
@@ -115,7 +113,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(201, 112);
+            label3.Location = new Point(157, 112);
             label3.Name = "label3";
             label3.Size = new Size(55, 15);
             label3.TabIndex = 5;
@@ -135,7 +133,7 @@
             pictureBox1.Image = Properties.Resources.logo_fit;
             pictureBox1.Location = new Point(29, 37);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(104, 60);
+            pictureBox1.Size = new Size(83, 60);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
@@ -144,7 +142,7 @@
             // 
             pictureBox2.BackgroundImageLayout = ImageLayout.Center;
             pictureBox2.Image = Properties.Resources.play;
-            pictureBox2.Location = new Point(130, 217);
+            pictureBox2.Location = new Point(121, 217);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(93, 76);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -155,7 +153,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.statistics;
-            pictureBox3.Location = new Point(29, 308);
+            pictureBox3.Location = new Point(29, 307);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(61, 57);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -163,32 +161,23 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.settings;
-            pictureBox4.Location = new Point(110, 308);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(58, 57);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 18;
-            pictureBox4.TabStop = false;
-            // 
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.bell;
-            pictureBox5.Location = new Point(192, 308);
+            pictureBox5.Location = new Point(131, 307);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(59, 57);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 19;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.information;
-            pictureBox6.Location = new Point(268, 301);
+            pictureBox6.Location = new Point(215, 307);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(64, 64);
+            pictureBox6.Size = new Size(76, 64);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 20;
             pictureBox6.TabStop = false;
@@ -199,10 +188,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(356, 383);
+            ClientSize = new Size(328, 383);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(label2);
@@ -220,7 +208,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
@@ -239,7 +226,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
     }

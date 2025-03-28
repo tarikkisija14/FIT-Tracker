@@ -81,3 +81,12 @@ C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\F
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmStatistika.resources
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\Siticone.Desktop.UI.dll
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmSveSesije.resources
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\Bunifu.Licensing.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\Bunifu.UI.WinForms.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\FontAwesome.Sharp.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\MaterialSkin.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\System.CodeDom.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmNotifikacije.resources

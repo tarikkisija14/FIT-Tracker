@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,7 @@ namespace FIT_Tracker.App
             Aktivna = false;
             startTime = DateTime.Now.Date;
 
+
         }
 
         private void Timer_Tick(object? sender, EventArgs e)
@@ -67,8 +69,22 @@ namespace FIT_Tracker.App
             lblPredmet.Text = $"{predmet.Naziv}";
             trajanje = TimeSpan.Zero; 
             UpdateTimer();
-
+           
         }
+
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                this.ClientRectangle,
+                Color.FromArgb(30, 144, 255), // Plava nijansa
+                Color.FromArgb(0, 0, 139),   // Tamnija plava
+                LinearGradientMode.Vertical))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
 
         private void btnZapocni_Click(object sender, EventArgs e)
         {
@@ -88,6 +104,18 @@ namespace FIT_Tracker.App
                 timer.Stop();
             }
         }
+
+        private void btnZapocni_MouseEnter(object sender, EventArgs e)
+        {
+            btnZapocni.BackColor = Color.RoyalBlue;
+        }
+
+        private void btnStart_MouseLeave(object sender, EventArgs e)
+        {
+            btnZapocni.BackColor = Color.DodgerBlue;
+        }
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {

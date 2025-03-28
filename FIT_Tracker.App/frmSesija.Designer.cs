@@ -100,14 +100,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.White;
             ClientSize = new Size(449, 257);
             Controls.Add(lblPredmet);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(btnZapocni);
             Controls.Add(lblTimer);
+            DoubleBuffered = true;
             Font = new Font("Segoe UI", 9F);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmSesija";
             Text = "Nova sesija";
             Load += frmSesija_Load;

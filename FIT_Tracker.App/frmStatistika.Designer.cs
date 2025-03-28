@@ -35,10 +35,6 @@
             cmbSemestar = new ComboBox();
             cmbGodina = new ComboBox();
             dgvSesijePredmet = new DataGridView();
-            Naziv = new DataGridViewTextBoxColumn();
-            Start = new DataGridViewTextBoxColumn();
-            Finish = new DataGridViewTextBoxColumn();
-            Trajanje = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label5 = new Label();
             dgvSesijeSedmica = new DataGridView();
@@ -61,6 +57,10 @@
             lblUkupnoPredmet = new Label();
             lblSedmicnoUkupno = new Label();
             lblMjesecUkupno = new Label();
+            Naziv = new DataGridViewTextBoxColumn();
+            Start = new DataGridViewTextBoxColumn();
+            Finish = new DataGridViewTextBoxColumn();
+            Trajanje = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvSesijePredmet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeSedmica).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeMjesec).BeginInit();
@@ -142,35 +142,6 @@
             dgvSesijePredmet.ReadOnly = true;
             dgvSesijePredmet.Size = new Size(684, 150);
             dgvSesijePredmet.TabIndex = 13;
-            // 
-            // Naziv
-            // 
-            Naziv.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Naziv.DataPropertyName = "Naziv";
-            Naziv.HeaderText = "Naziv";
-            Naziv.Name = "Naziv";
-            Naziv.ReadOnly = true;
-            // 
-            // Start
-            // 
-            Start.DataPropertyName = "Start";
-            Start.HeaderText = "Start";
-            Start.Name = "Start";
-            Start.ReadOnly = true;
-            // 
-            // Finish
-            // 
-            Finish.DataPropertyName = "Finish";
-            Finish.HeaderText = "Finish";
-            Finish.Name = "Finish";
-            Finish.ReadOnly = true;
-            // 
-            // Trajanje
-            // 
-            Trajanje.DataPropertyName = "Trajanje";
-            Trajanje.HeaderText = "Trajanje";
-            Trajanje.Name = "Trajanje";
-            Trajanje.ReadOnly = true;
             // 
             // label1
             // 
@@ -370,6 +341,35 @@
             lblMjesecUkupno.TabIndex = 25;
             lblMjesecUkupno.Text = "label7";
             // 
+            // Naziv
+            // 
+            Naziv.DataPropertyName = "Naziv";
+            Naziv.HeaderText = "Naziv";
+            Naziv.Name = "Naziv";
+            Naziv.ReadOnly = true;
+            Naziv.Width = 341;
+            // 
+            // Start
+            // 
+            Start.DataPropertyName = "Start";
+            Start.HeaderText = "Start";
+            Start.Name = "Start";
+            Start.ReadOnly = true;
+            // 
+            // Finish
+            // 
+            Finish.DataPropertyName = "Finish";
+            Finish.HeaderText = "Finish";
+            Finish.Name = "Finish";
+            Finish.ReadOnly = true;
+            // 
+            // Trajanje
+            // 
+            Trajanje.DataPropertyName = "Trajanje";
+            Trajanje.HeaderText = "Trajanje";
+            Trajanje.Name = "Trajanje";
+            Trajanje.ReadOnly = true;
+            // 
             // frmStatistika
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -422,10 +422,6 @@
         private Label lblSedmicno;
         private Label lblMjesec;
         private Label lblPredmet;
-        private DataGridViewTextBoxColumn Naziv;
-        private DataGridViewTextBoxColumn Start;
-        private DataGridViewTextBoxColumn Finish;
-        private DataGridViewTextBoxColumn Trajanje;
         private DataGridViewTextBoxColumn NazivSedmica;
         private DataGridViewTextBoxColumn PredmetSedmica;
         private DataGridViewTextBoxColumn StartSedmica;
@@ -440,5 +436,9 @@
         private Label lblUkupnoPredmet;
         private Label lblSedmicnoUkupno;
         private Label lblMjesecUkupno;
+        private DataGridViewTextBoxColumn Naziv;
+        private DataGridViewTextBoxColumn Start;
+        private DataGridViewTextBoxColumn Finish;
+        private DataGridViewTextBoxColumn Trajanje;
     }
 }

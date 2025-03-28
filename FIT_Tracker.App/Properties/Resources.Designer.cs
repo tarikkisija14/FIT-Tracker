@@ -63,6 +63,26 @@ namespace FIT_Tracker.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _12177271 {
+            get {
+                object obj = ResourceManager.GetObject("12177271", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5028066 {
+            get {
+                object obj = ResourceManager.GetObject("5028066", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bar_chart {
             get {
                 object obj = ResourceManager.GetObject("bar-chart", resourceCulture);
@@ -76,6 +96,17 @@ namespace FIT_Tracker.App.Properties {
         internal static System.Drawing.Bitmap bell {
             get {
                 object obj = ResourceManager.GetObject("bell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hd_red_square_close_x_button_icon_transparent_background_701751695038842smjnuhymfc {
+            get {
+                object obj = ResourceManager.GetObject("hd-red-square-close-x-button-icon-transparent-background-701751695038842smjnuhymf" +
+                        "c", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +137,26 @@ namespace FIT_Tracker.App.Properties {
         internal static System.Drawing.Bitmap play {
             get {
                 object obj = ResourceManager.GetObject("play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_plus_plus_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-plus-plus-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_round_close_x_logo_icon_transparent_background_701751695038892wgkt1dadwn {
+            get {
+                object obj = ResourceManager.GetObject("red-round-close-x-logo-icon-transparent-background-701751695038892wgkt1dadwn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

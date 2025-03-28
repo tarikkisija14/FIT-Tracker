@@ -95,6 +95,11 @@ namespace FIT_Tracker.App
         {
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            new frmNotifikacije().ShowDialog(); 
+        }
     }
 
 
