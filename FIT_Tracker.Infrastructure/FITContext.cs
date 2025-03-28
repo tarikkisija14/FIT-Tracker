@@ -24,6 +24,26 @@ namespace FIT_Tracker.Infrastructure
         public DbSet<Predmet> Predmeti { get; set; }
         public DbSet<Sesija> Sesije { get; set; }
 
+        public DbSet<Notifikacija> Notifikacija { get; set; }
+
+
+        public void DodajNotifikaciju(string poruka,DateTime vrijeme)
+        {
+            var db=new FITContext();
+
+            Notifikacija novanotifikacija = new Notifikacija()
+            {
+                Poruka = poruka,
+                VrijemeNotifikacije = vrijeme,
+                isRead = false
+            };
+            db.Notifikacija.Add(novanotifikacija);
+            db.SaveChanges();
+
+        }
+
+
+
 
     }
 }
