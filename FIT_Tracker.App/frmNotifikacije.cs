@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,14 +17,20 @@ namespace FIT_Tracker.App
     {
         private System.Windows.Forms.Timer timerNotifikacija;
         FITContext db = new FITContext();
+        private NotifyIcon notifyIcon;
         public frmNotifikacije()
         {
             InitializeComponent();
             UcitajNotifikacije();
+
             timerNotifikacija = new System.Windows.Forms.Timer();
             timerNotifikacija.Interval = 10000; 
             timerNotifikacija.Tick += TimerNotifikacija_Tick;
             timerNotifikacija.Start();
+
+            notifyIcon=new NotifyIcon();
+            notifyIcon.Visible = true;
+            notifyIcon.Icon=SystemIcons.Information;
         }
 
         private void TimerNotifikacija_Tick(object? sender, EventArgs e)
@@ -35,11 +42,16 @@ namespace FIT_Tracker.App
         {
             var sada = DateTime.Now;
             var neprocitaneNotifikacije = db.Notifikacija
-           .Where(n => n.VrijemeNotifikacije <= sada && !n.isRead)
+           .Where(x => x.VrijemeNotifikacije <= sada && !x.isRead)
            .ToList();
 
             foreach (var notifikacija in neprocitaneNotifikacije)
             {
+                SystemSounds.Exclamation.Play();
+                notifyIcon.BalloonTipTitle = "Notifikacija";
+                notifyIcon.BalloonTipText = notifikacija.Poruka;
+                notifyIcon.ShowBalloonTip(5000);
+
                 MessageBox.Show(notifikacija.Poruka, "Notifikacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 notifikacija.isRead = true;
             }
@@ -51,7 +63,10 @@ namespace FIT_Tracker.App
         {
             lstNotifikacije.Items.Clear();
             var db = new FITContext();
-            var notifikacije = db.Notifikacija.ToList();
+            var notifikacije = db.Notifikacija
+                 .OrderByDescending(n => n.VrijemeNotifikacije)
+                 .ToList();
+            
             foreach ( var notifikacija in notifikacije)
             {
                 lstNotifikacije.Items.Add($"{notifikacija.Id}: {notifikacija.Poruka} ({notifikacija.VrijemeNotifikacije})");
@@ -95,26 +110,23 @@ namespace FIT_Tracker.App
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            string nova = Microsoft.VisualBasic.Interaction.InputBox("Unesi novu notifikaciju:", "Dodaj Notifikaciju", "");
-            if (!string.IsNullOrWhiteSpace(nova))
+            frmNovaNotifikacija novaNotifikacijaForm = new frmNovaNotifikacija();
+            if (novaNotifikacijaForm.ShowDialog() == DialogResult.OK)
             {
-
-                var db = new FITContext();
-                Notifikacija notifikacija = new Notifikacija
+                var notifikacija = new Notifikacija
                 {
-                    Poruka = nova,
-                    VrijemeNotifikacije = DateTime.Now.AddMinutes(1), 
+                    Poruka = novaNotifikacijaForm.Poruka,
+                    VrijemeNotifikacije = novaNotifikacijaForm.Vrijeme,
                     isRead = false
                 };
 
-                 db.Notifikacija.Add(notifikacija);
-                 db.SaveChanges();
-                
-
-                UcitajNotifikacije(); 
+                db.Notifikacija.Add(notifikacija);
+                db.SaveChanges();
+                UcitajNotifikacije();
             }
         }
-        
+
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {

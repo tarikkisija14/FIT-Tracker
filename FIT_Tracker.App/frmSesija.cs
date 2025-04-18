@@ -77,8 +77,8 @@ namespace FIT_Tracker.App
         {
             using (LinearGradientBrush brush = new LinearGradientBrush(
                 this.ClientRectangle,
-                Color.FromArgb(30, 144, 255), // Plava nijansa
-                Color.FromArgb(0, 0, 139),   // Tamnija plava
+                Color.FromArgb(30, 144, 255),
+                Color.FromArgb(0, 0, 139),  
                 LinearGradientMode.Vertical))
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);

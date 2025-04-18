@@ -10,6 +10,9 @@
     <Compile Update="frmNotifikacije.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmNovaNotifikacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmSesija.cs">
       <SubType>Form</SubType>
     </Compile>
