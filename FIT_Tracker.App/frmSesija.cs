@@ -47,7 +47,7 @@ namespace FIT_Tracker.App
 
         private void InitForma()
         {
-            // UI izgled
+           
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
@@ -55,7 +55,7 @@ namespace FIT_Tracker.App
             lblPredmet.ForeColor = Color.White;
             lblPredmet.BackColor = Color.Transparent;
 
-            // Timer
+           
             trajanje = TimeSpan.Zero;
             startTime = DateTime.Now.Date;
             Aktivna = false;
@@ -63,7 +63,7 @@ namespace FIT_Tracker.App
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
 
-            // Dugmići
+            
             Button[] dugmici = { btnZapocni, button2, button3 };
             foreach (Button btn in dugmici)
             {
@@ -197,8 +197,43 @@ namespace FIT_Tracker.App
 
             _context.Sesije.Add(nova);
             _context.SaveChanges();
+
+            var target = _context.Target.FirstOrDefault(t => t.PredmetId == predmet.Id);
+
+            var trajanja = _context.Sesije
+              .Where(x => x.PredmetId == predmet.Id)
+              .AsEnumerable() 
+              .Select(x => ParseTrajanje(x.Trajanje))
+              .Where(x => x != null)
+              .Select(x => x.Value)
+              .ToList();
+
+            TimeSpan ukupno = TimeSpan.FromSeconds(trajanja.Sum());
+            target.TrenutnoVrijeme = ukupno;
+            _context.SaveChanges();
+
+            if (target.Ispunjen)
+            {
+                MessageBox.Show(" Ispunili ste target za ovaj predmet!\nSpremni ste za ispit! ", "Cilj postignut", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
         }
 
+        private int? ParseTrajanje(string trajanje)
+        {
+            if (string.IsNullOrWhiteSpace(trajanje)) return null;
+
+            int h = 0, m = 0, s = 0;
+            foreach (var part in trajanje.Split(' '))
+            {
+                if (part.EndsWith("h") && int.TryParse(part.TrimEnd('h'), out int hh)) h = hh;
+                else if (part.EndsWith("m") && int.TryParse(part.TrimEnd('m'), out int mm)) m = mm;
+                else if (part.EndsWith("s") && int.TryParse(part.TrimEnd('s'), out int ss)) s = ss;
+            }
+
+            return h * 3600 + m * 60 + s;
+        }
 
         private void timerclose_Tick(object? sender, EventArgs e)
         {

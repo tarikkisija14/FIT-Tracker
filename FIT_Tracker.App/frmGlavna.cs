@@ -19,6 +19,25 @@ namespace FIT_Tracker.App
         public frmGlavna()
         {
             InitializeComponent();
+            BoljiInterface();
+        }
+
+        private void BoljiInterface()
+        {
+            this.BackColor = Color.White;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+
+            label1.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(30, 30, 60);
+
+            cmbGodina.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSemestar.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPredmet.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            SetIconStyle(pictureBox2);
+            SetIconStyle(pictureBox3);
+            SetIconStyle(pictureBox5);
         }
 
         private void frmGlavna_Load(object sender, EventArgs e)
@@ -98,7 +117,19 @@ namespace FIT_Tracker.App
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            new frmNotifikacije().ShowDialog(); 
+            new frmNotifikacije().ShowDialog();
+        }
+
+        private void SetIconStyle(PictureBox pic)
+        {
+            pic.BackColor = Color.Transparent;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            pic.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            new frmTarget().ShowDialog();
         }
     }
 

@@ -91,3 +91,5 @@ C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\S
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmNotifikacije.resources
 C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmNovaNotifikacija.resources
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmTarget.resources
+C:\Users\tarik\source\repos\FIT_Timer\FIT_Tracker.App\obj\Debug\net8.0-windows\FIT_Tracker.App.frmPregledTargeta.resources

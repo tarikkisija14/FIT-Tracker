@@ -26,6 +26,8 @@ namespace FIT_Tracker.Infrastructure
 
         public DbSet<Notifikacija> Notifikacija { get; set; }
 
+        public DbSet<Target> Target { get; set; }
+
 
         public void DodajNotifikaciju(string poruka,DateTime vrijeme)
         {
