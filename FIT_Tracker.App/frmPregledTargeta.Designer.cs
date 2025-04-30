@@ -40,14 +40,14 @@
             dgvTargeti.Location = new Point(20, 20);
             dgvTargeti.Name = "dgvTargeti";
             dgvTargeti.ReadOnly = true;
-            dgvTargeti.Size = new Size(600, 300);
+            dgvTargeti.Size = new Size(851, 470);
             dgvTargeti.TabIndex = 0;
             // 
             // frmPregledTargeta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(640, 340);
+            ClientSize = new Size(883, 502);
             Controls.Add(dgvTargeti);
             Name = "frmPregledTargeta";
             Text = "frmPregledTargeta";

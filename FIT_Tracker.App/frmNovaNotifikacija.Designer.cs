@@ -73,22 +73,28 @@
             // 
             // btnDodaj
             // 
+            btnDodaj.BackColor = Color.SteelBlue;
             btnDodaj.FlatStyle = FlatStyle.Flat;
+            btnDodaj.ForeColor = Color.White;
             btnDodaj.Location = new Point(12, 75);
             btnDodaj.Name = "btnDodaj";
             btnDodaj.Size = new Size(125, 30);
             btnDodaj.TabIndex = 2;
             btnDodaj.Text = "Dodaj";
+            btnDodaj.UseVisualStyleBackColor = false;
             btnDodaj.Click += btnDodaj_Click;
             // 
             // btnOtkazi
             // 
+            btnOtkazi.BackColor = Color.SteelBlue;
             btnOtkazi.FlatStyle = FlatStyle.Flat;
+            btnOtkazi.ForeColor = Color.White;
             btnOtkazi.Location = new Point(147, 75);
             btnOtkazi.Name = "btnOtkazi";
             btnOtkazi.Size = new Size(125, 30);
             btnOtkazi.TabIndex = 3;
             btnOtkazi.Text = "Otkaži";
+            btnOtkazi.UseVisualStyleBackColor = false;
             btnOtkazi.Click += btnOtkazi_Click;
             // 
             // frmNovaNotifikacija

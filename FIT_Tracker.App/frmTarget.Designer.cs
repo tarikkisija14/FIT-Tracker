@@ -148,7 +148,7 @@
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(96, 32);
             btnClose.TabIndex = 13;
-            btnClose.Text = "Close";
+            btnClose.Text = "Zatvori";
             btnClose.UseVisualStyleBackColor = false;
             // 
             // button1
@@ -160,7 +160,7 @@
             button1.Name = "button1";
             button1.Size = new Size(260, 40);
             button1.TabIndex = 14;
-            button1.Text = "Pogledaj Targete";
+            button1.Text = "Pregledaj Targete";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 

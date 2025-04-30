@@ -48,7 +48,7 @@
             // 
             // btnZapocni
             // 
-            btnZapocni.BackColor = Color.FromArgb(2, 145, 247);
+            btnZapocni.BackColor = Color.SteelBlue;
             btnZapocni.FlatStyle = FlatStyle.Flat;
             btnZapocni.ForeColor = Color.White;
             btnZapocni.Location = new Point(52, 177);
@@ -61,7 +61,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(2, 145, 247);
+            button2.BackColor = Color.SteelBlue;
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
             button2.Location = new Point(170, 177);
@@ -74,7 +74,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(2, 145, 247);
+            button3.BackColor = Color.SteelBlue;
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
             button3.Location = new Point(289, 177);
@@ -89,7 +89,7 @@
             // 
             lblPredmet.AutoSize = true;
             lblPredmet.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            lblPredmet.ForeColor = Color.FromArgb(2, 145, 247);
+            lblPredmet.ForeColor = Color.SteelBlue;
             lblPredmet.Location = new Point(52, 41);
             lblPredmet.Name = "lblPredmet";
             lblPredmet.Size = new Size(70, 28);

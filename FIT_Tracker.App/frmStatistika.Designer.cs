@@ -336,12 +336,14 @@
             // 
             // btnSve
             // 
+            btnSve.BackColor = Color.SteelBlue;
+            btnSve.ForeColor = Color.White;
             btnSve.Location = new Point(626, 23);
             btnSve.Name = "btnSve";
             btnSve.Size = new Size(98, 32);
             btnSve.TabIndex = 22;
-            btnSve.Text = "Sve sesije";
-            btnSve.UseVisualStyleBackColor = true;
+            btnSve.Text = "Historija";
+            btnSve.UseVisualStyleBackColor = false;
             btnSve.Click += btnSve_Click;
             // 
             // lblUkupnoPredmet
@@ -373,12 +375,14 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.SteelBlue;
+            button1.ForeColor = Color.White;
             button1.Location = new Point(522, 23);
             button1.Name = "button1";
             button1.Size = new Size(98, 32);
             button1.TabIndex = 26;
             button1.Text = "Svi Targeti";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // frmStatistika

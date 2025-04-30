@@ -53,22 +53,28 @@
             // 
             // btnSave
             // 
+            btnSave.BackColor = Color.SteelBlue;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(411, 69);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 2;
             btnSave.Text = "Snimi";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnOdustani
             // 
+            btnOdustani.BackColor = Color.SteelBlue;
+            btnOdustani.FlatStyle = FlatStyle.Flat;
+            btnOdustani.ForeColor = Color.White;
             btnOdustani.Location = new Point(330, 69);
             btnOdustani.Name = "btnOdustani";
             btnOdustani.Size = new Size(75, 23);
             btnOdustani.TabIndex = 3;
             btnOdustani.Text = "Odustani";
-            btnOdustani.UseVisualStyleBackColor = true;
+            btnOdustani.UseVisualStyleBackColor = false;
             btnOdustani.Click += btnOdustani_Click;
             // 
             // frmNazivSesije

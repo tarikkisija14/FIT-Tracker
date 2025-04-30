@@ -167,7 +167,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.bell;
-            pictureBox5.Location = new Point(182, 307);
+            pictureBox5.Location = new Point(178, 307);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(61, 57);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -177,10 +177,10 @@
             // 
             // pictureBox6
             // 
-            pictureBox6.Image = Properties.Resources.information;
-            pictureBox6.Location = new Point(255, 299);
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(255, 307);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(61, 65);
+            pictureBox6.Size = new Size(70, 57);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 20;
             pictureBox6.TabStop = false;
@@ -202,7 +202,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(328, 383);
+            ClientSize = new Size(335, 383);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
