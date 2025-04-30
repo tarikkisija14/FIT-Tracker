@@ -63,27 +63,35 @@ namespace FIT_Tracker.App
         private void InitGrid()
         {
             dgvTargeti.BorderStyle = BorderStyle.None;
-            dgvTargeti.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
-            dgvTargeti.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvTargeti.DefaultCellStyle.SelectionBackColor = Color.SteelBlue;
-            dgvTargeti.DefaultCellStyle.SelectionForeColor = Color.White;
-
             dgvTargeti.BackgroundColor = Color.White;
             dgvTargeti.EnableHeadersVisualStyles = false;
+
             dgvTargeti.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvTargeti.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
             dgvTargeti.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvTargeti.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgvTargeti.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgvTargeti.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvTargeti.DefaultCellStyle.SelectionBackColor = Color.SteelBlue;
+            dgvTargeti.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvTargeti.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
 
             dgvTargeti.DefaultCellStyle.Font = new Font("Segoe UI", 10);
-            dgvTargeti.RowTemplate.Height = 28;
-            
             dgvTargeti.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvTargeti.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvTargeti.DefaultCellStyle.Padding = new Padding(5);
+            dgvTargeti.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
+            
+
+            dgvTargeti.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTargeti.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+
+            
         }
+
+
+
     }
 
 
-    
+
 }

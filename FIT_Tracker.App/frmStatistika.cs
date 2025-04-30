@@ -314,7 +314,7 @@ namespace FIT_Tracker.App
             var predmet = cmbPredmet.SelectedItem as Predmet;
             if (predmet != null)
             {
-                var sesije=_context.Sesije.Where(x=>x.PredmetId == predmet.Id).ToList();
+                var sesije = _context.Sesije.Where(x => x.PredmetId == predmet.Id).ToList();
 
                 var trajanja = sesije
                 .Select(x => ParseTrajanje(x.Trajanje))
@@ -324,7 +324,7 @@ namespace FIT_Tracker.App
 
                 if (trajanja.Count > 0)
                 {
-                    double prosjecnoTrajanje = trajanja.Average(); 
+                    double prosjecnoTrajanje = trajanja.Average();
                     int minute = (int)(prosjecnoTrajanje / 60);
                     int sekunde = (int)(prosjecnoTrajanje % 60);
 
@@ -375,6 +375,11 @@ namespace FIT_Tracker.App
         private void lblPredmet_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmPregledTargeta().ShowDialog();
         }
     }
 }

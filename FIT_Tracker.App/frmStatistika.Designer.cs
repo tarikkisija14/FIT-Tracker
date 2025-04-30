@@ -35,6 +35,10 @@
             cmbSemestar = new ComboBox();
             cmbGodina = new ComboBox();
             dgvSesijePredmet = new DataGridView();
+            Naziv = new DataGridViewTextBoxColumn();
+            Start = new DataGridViewTextBoxColumn();
+            Finish = new DataGridViewTextBoxColumn();
+            Trajanje = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label5 = new Label();
             dgvSesijeSedmica = new DataGridView();
@@ -57,10 +61,7 @@
             lblUkupnoPredmet = new Label();
             lblSedmicnoUkupno = new Label();
             lblMjesecUkupno = new Label();
-            Naziv = new DataGridViewTextBoxColumn();
-            Start = new DataGridViewTextBoxColumn();
-            Finish = new DataGridViewTextBoxColumn();
-            Trajanje = new DataGridViewTextBoxColumn();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvSesijePredmet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeSedmica).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSesijeMjesec).BeginInit();
@@ -142,6 +143,35 @@
             dgvSesijePredmet.ReadOnly = true;
             dgvSesijePredmet.Size = new Size(684, 150);
             dgvSesijePredmet.TabIndex = 13;
+            // 
+            // Naziv
+            // 
+            Naziv.DataPropertyName = "Naziv";
+            Naziv.HeaderText = "Naziv";
+            Naziv.Name = "Naziv";
+            Naziv.ReadOnly = true;
+            Naziv.Width = 341;
+            // 
+            // Start
+            // 
+            Start.DataPropertyName = "Start";
+            Start.HeaderText = "Start";
+            Start.Name = "Start";
+            Start.ReadOnly = true;
+            // 
+            // Finish
+            // 
+            Finish.DataPropertyName = "Finish";
+            Finish.HeaderText = "Finish";
+            Finish.Name = "Finish";
+            Finish.ReadOnly = true;
+            // 
+            // Trajanje
+            // 
+            Trajanje.DataPropertyName = "Trajanje";
+            Trajanje.HeaderText = "Trajanje";
+            Trajanje.Name = "Trajanje";
+            Trajanje.ReadOnly = true;
             // 
             // label1
             // 
@@ -341,34 +371,15 @@
             lblMjesecUkupno.TabIndex = 25;
             lblMjesecUkupno.Text = "label7";
             // 
-            // Naziv
+            // button1
             // 
-            Naziv.DataPropertyName = "Naziv";
-            Naziv.HeaderText = "Naziv";
-            Naziv.Name = "Naziv";
-            Naziv.ReadOnly = true;
-            Naziv.Width = 341;
-            // 
-            // Start
-            // 
-            Start.DataPropertyName = "Start";
-            Start.HeaderText = "Start";
-            Start.Name = "Start";
-            Start.ReadOnly = true;
-            // 
-            // Finish
-            // 
-            Finish.DataPropertyName = "Finish";
-            Finish.HeaderText = "Finish";
-            Finish.Name = "Finish";
-            Finish.ReadOnly = true;
-            // 
-            // Trajanje
-            // 
-            Trajanje.DataPropertyName = "Trajanje";
-            Trajanje.HeaderText = "Trajanje";
-            Trajanje.Name = "Trajanje";
-            Trajanje.ReadOnly = true;
+            button1.Location = new Point(522, 23);
+            button1.Name = "button1";
+            button1.Size = new Size(98, 32);
+            button1.TabIndex = 26;
+            button1.Text = "Svi Targeti";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // frmStatistika
             // 
@@ -376,6 +387,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(754, 833);
+            Controls.Add(button1);
             Controls.Add(lblMjesecUkupno);
             Controls.Add(lblSedmicnoUkupno);
             Controls.Add(lblUkupnoPredmet);
@@ -440,5 +452,6 @@
         private DataGridViewTextBoxColumn Start;
         private DataGridViewTextBoxColumn Finish;
         private DataGridViewTextBoxColumn Trajanje;
+        private Button button1;
     }
 }

@@ -178,9 +178,9 @@
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.information;
-            pictureBox6.Location = new Point(255, 307);
+            pictureBox6.Location = new Point(255, 299);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(61, 57);
+            pictureBox6.Size = new Size(61, 65);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 20;
             pictureBox6.TabStop = false;

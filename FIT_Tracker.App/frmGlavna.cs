@@ -10,45 +10,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace FIT_Tracker.App
 {
     public partial class frmGlavna : Form
     {
+       
+
+
         FITContext _context = new FITContext();
         public frmGlavna()
         {
             InitializeComponent();
-            BoljiInterface();
+            
+           
         }
 
-        private void BoljiInterface()
-        {
-            this.BackColor = Color.White;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-
-            label1.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(30, 30, 60);
-
-            cmbGodina.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbSemestar.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbPredmet.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            SetIconStyle(pictureBox2);
-            SetIconStyle(pictureBox3);
-            SetIconStyle(pictureBox5);
-        }
+      
 
         private void frmGlavna_Load(object sender, EventArgs e)
         {
             UcitajPodatke();
+           
 
         }
-
-
-
-
+      
 
 
         private void UcitajPodatke()
@@ -120,12 +107,8 @@ namespace FIT_Tracker.App
             new frmNotifikacije().ShowDialog();
         }
 
-        private void SetIconStyle(PictureBox pic)
-        {
-            pic.BackColor = Color.Transparent;
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
-            pic.Cursor = Cursors.Hand;
-        }
+       
+
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
