@@ -74,10 +74,11 @@
             cbNotifikacije.Font = new Font("Segoe UI", 10F);
             cbNotifikacije.Location = new Point(20, 221);
             cbNotifikacije.Name = "cbNotifikacije";
-            cbNotifikacije.Size = new Size(152, 23);
+            cbNotifikacije.Size = new Size(167, 23);
             cbNotifikacije.TabIndex = 2;
-            cbNotifikacije.Text = "Omoguci notifikacije";
+            cbNotifikacije.Text = "Onemoguci notifikacije";
             cbNotifikacije.UseVisualStyleBackColor = true;
+            cbNotifikacije.CheckedChanged += cbNotifikacije_CheckedChanged;
             // 
             // panel1
             // 
@@ -137,7 +138,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(399, 317);
+            ClientSize = new Size(399, 318);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);

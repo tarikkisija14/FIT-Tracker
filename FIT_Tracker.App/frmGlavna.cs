@@ -32,11 +32,21 @@ namespace FIT_Tracker.App
         private void frmGlavna_Load(object sender, EventArgs e)
         {
             UcitajPodatke();
+            Tooltips();
            
 
         }
-      
 
+        private void Tooltips()
+        {
+            ToolTip tooltip = new ToolTip();
+            tooltip.SetToolTip(pictureBox2, "Zapocni sesiju");
+            tooltip.SetToolTip(pictureBox3, "Statistika");
+            tooltip.SetToolTip(pictureBox4, "Dodaj Target");
+            tooltip.SetToolTip(pictureBox5, "Dodaj obavijest");
+            tooltip.SetToolTip(pictureBox6, "Info");
+
+        }
 
         private void UcitajPodatke()
         {

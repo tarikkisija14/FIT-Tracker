@@ -112,5 +112,10 @@ namespace FIT_Tracker.App
         {
             new frmPregledTargeta().ShowDialog();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

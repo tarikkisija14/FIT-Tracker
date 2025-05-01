@@ -150,6 +150,7 @@
             btnClose.TabIndex = 13;
             btnClose.Text = "Zatvori";
             btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // button1
             // 

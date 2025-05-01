@@ -24,13 +24,13 @@ namespace FIT_Tracker.App
             UcitajNotifikacije();
 
             timerNotifikacija = new System.Windows.Forms.Timer();
-            timerNotifikacija.Interval = 10000; 
+            timerNotifikacija.Interval = 10000;
             timerNotifikacija.Tick += TimerNotifikacija_Tick;
             timerNotifikacija.Start();
 
-            notifyIcon=new NotifyIcon();
+            notifyIcon = new NotifyIcon();
             notifyIcon.Visible = true;
-            notifyIcon.Icon=SystemIcons.Information;
+            notifyIcon.Icon = SystemIcons.Information;
         }
 
         private void TimerNotifikacija_Tick(object? sender, EventArgs e)
@@ -66,8 +66,8 @@ namespace FIT_Tracker.App
             var notifikacije = db.Notifikacija
                  .OrderByDescending(n => n.VrijemeNotifikacije)
                  .ToList();
-            
-            foreach ( var notifikacija in notifikacije)
+
+            foreach (var notifikacija in notifikacije)
             {
                 lstNotifikacije.Items.Add($"{notifikacija.Id}: {notifikacija.Poruka} ({notifikacija.VrijemeNotifikacije})");
             }
@@ -96,16 +96,16 @@ namespace FIT_Tracker.App
             var db = new FITContext();
 
             if (db.Notifikacija.Any())
-                {
-                    db.Notifikacija.RemoveRange(db.Notifikacija);
-                    db.SaveChanges();
-                    UcitajNotifikacije();
+            {
+                db.Notifikacija.RemoveRange(db.Notifikacija);
+                db.SaveChanges();
+                UcitajNotifikacije();
             }
             else
             {
                 MessageBox.Show("Lista notifikacija je već prazna!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -136,16 +136,16 @@ namespace FIT_Tracker.App
                 int id = int.Parse(selectedItem.Split(':')[0]);
 
                 var db = new FITContext();
-                
+
                 var notifikacija = db.Notifikacija.Find(id);
                 if (notifikacija != null)
                 {
                     db.Notifikacija.Remove(notifikacija);
                     db.SaveChanges();
                 }
-                
 
-                UcitajNotifikacije(); 
+
+                UcitajNotifikacije();
             }
             else
             {
@@ -156,6 +156,14 @@ namespace FIT_Tracker.App
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbNotifikacije_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbNotifikacije.Checked)
+                timerNotifikacija.Stop();     
+            else
+                timerNotifikacija.Start();    
         }
     }
 }

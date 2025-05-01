@@ -53,6 +53,7 @@ namespace FIT_Tracker.App
             dgv.BorderStyle = BorderStyle.None;
             dgv.BackgroundColor = Color.White;
             dgv.EnableHeadersVisualStyles = false;
+            dgv.RowHeadersVisible = false;
 
             dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;

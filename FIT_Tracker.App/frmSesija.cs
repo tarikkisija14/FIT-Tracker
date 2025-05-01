@@ -107,8 +107,8 @@ namespace FIT_Tracker.App
         {
             using var brush = new LinearGradientBrush(
                 ClientRectangle,
-                Color.FromArgb(30, 144, 255),
-                Color.FromArgb(0, 0, 139),
+                Color.SteelBlue,
+                Color.White,
                 LinearGradientMode.Vertical);
 
             e.Graphics.FillRectangle(brush, ClientRectangle);

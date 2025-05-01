@@ -218,6 +218,7 @@
             Controls.Add(label3);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmGlavna";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FIT Tracker";
             Load += frmGlavna_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

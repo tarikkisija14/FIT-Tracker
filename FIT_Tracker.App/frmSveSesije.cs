@@ -35,7 +35,7 @@ namespace FIT_Tracker.App
             dgvSveSesije.BorderStyle = BorderStyle.None;
             dgvSveSesije.BackgroundColor = Color.White;
             dgvSveSesije.EnableHeadersVisualStyles = false;
-          
+            dgvSveSesije.RowHeadersVisible = false;
             dgvSveSesije.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvSveSesije.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
             dgvSveSesije.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
