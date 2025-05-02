@@ -16,24 +16,24 @@ namespace FIT_Tracker.App
 {
     public partial class frmGlavna : Form
     {
-       
+
 
 
         FITContext _context = new FITContext();
         public frmGlavna()
         {
             InitializeComponent();
-            
-           
+
+
         }
 
-      
+
 
         private void frmGlavna_Load(object sender, EventArgs e)
         {
             UcitajPodatke();
             Tooltips();
-           
+
 
         }
 
@@ -117,12 +117,17 @@ namespace FIT_Tracker.App
             new frmNotifikacije().ShowDialog();
         }
 
-       
+
 
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             new frmTarget().ShowDialog();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            new frmAbout().ShowDialog();
         }
     }
 

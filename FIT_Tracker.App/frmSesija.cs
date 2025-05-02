@@ -52,7 +52,7 @@ namespace FIT_Tracker.App
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
             lblPredmet.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-            lblPredmet.ForeColor = Color.White;
+            lblPredmet.ForeColor = Color.SteelBlue;
             lblPredmet.BackColor = Color.Transparent;
 
            
@@ -68,7 +68,7 @@ namespace FIT_Tracker.App
             foreach (Button btn in dugmici)
             {
                 btn.FlatStyle = FlatStyle.Flat;
-                btn.FlatAppearance.BorderColor = Color.White;
+                btn.FlatAppearance.BorderColor = Color.SteelBlue;
                 btn.FlatAppearance.BorderSize = 1;
                 btn.BackColor = Color.Transparent;
                 btn.ForeColor = Color.White;
@@ -92,7 +92,7 @@ namespace FIT_Tracker.App
             lblTimer.Text = vrijeme;
             lblTimer.Font = new Font("Segoe UI", 28, FontStyle.Bold);
             lblTimer.ForeColor = Aktivna ? Color.Red : Color.LightGray;
-            lblTimer.BackColor = Color.White;
+            lblTimer.BackColor = Color.SteelBlue;
             lblTimer.TextAlign = ContentAlignment.MiddleCenter;
         }
 
@@ -107,8 +107,8 @@ namespace FIT_Tracker.App
         {
             using var brush = new LinearGradientBrush(
                 ClientRectangle,
-                Color.SteelBlue,
                 Color.White,
+                Color.SteelBlue,
                 LinearGradientMode.Vertical);
 
             e.Graphics.FillRectangle(brush, ClientRectangle);
@@ -160,23 +160,31 @@ namespace FIT_Tracker.App
                 timer.Stop();
             }
 
-            var nazivForm = new frmNazivSesije();
+            var nazivForma = new frmNazivSesije();
 
-            if (nazivForm.ShowDialog() == DialogResult.OK)
+            if (nazivForma.ShowDialog() == DialogResult.OK)
             {
-                SpremiSesiju(nazivForm.Naziv);
+                SpremiSesiju(nazivForma.Naziv);
             }
             else
             {
                 trajanje = TimeSpan.Zero;
                 UpdateTimer();
-                Task.Delay(1000).ContinueWith(_ => Invoke((Action)(Close)));
+                Task.Delay(1000).ContinueWith(t =>
+                {
+                    if (this.IsHandleCreated)
+                        this.BeginInvoke((Action)(() => this.Close()));
+                });
                 return;
             }
 
             trajanje = TimeSpan.Zero;
             UpdateTimer();
-            Task.Delay(1000).ContinueWith(_ => Invoke((Action)(Close)));
+            Task.Delay(1000).ContinueWith(t =>
+            {
+                if (this.IsHandleCreated)
+                    this.BeginInvoke((Action)(() => this.Close()));
+            });
         }
 
         private void SpremiSesiju(string naziv)

@@ -48,8 +48,8 @@
             // 
             lblNaziv.AutoSize = true;
             lblNaziv.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblNaziv.ForeColor = Color.Navy;
-            lblNaziv.Location = new Point(60, 10);
+            lblNaziv.ForeColor = Color.SteelBlue;
+            lblNaziv.Location = new Point(20, 9);
             lblNaziv.Name = "lblNaziv";
             lblNaziv.Size = new Size(113, 25);
             lblNaziv.TabIndex = 0;

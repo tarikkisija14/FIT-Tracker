@@ -70,7 +70,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(271, 63);
+            label4.Location = new Point(256, 55);
             label4.Name = "label4";
             label4.Size = new Size(52, 15);
             label4.TabIndex = 12;
@@ -79,7 +79,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(182, 63);
+            label3.Location = new Point(167, 55);
             label3.Name = "label3";
             label3.Size = new Size(55, 15);
             label3.TabIndex = 11;
@@ -88,7 +88,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(40, 63);
+            label2.Location = new Point(25, 55);
             label2.Name = "label2";
             label2.Size = new Size(83, 15);
             label2.TabIndex = 10;
@@ -100,7 +100,7 @@
             cmbPredmet.FlatStyle = FlatStyle.Flat;
             cmbPredmet.ForeColor = Color.Black;
             cmbPredmet.FormattingEnabled = true;
-            cmbPredmet.Location = new Point(271, 80);
+            cmbPredmet.Location = new Point(256, 72);
             cmbPredmet.Name = "cmbPredmet";
             cmbPredmet.Size = new Size(340, 23);
             cmbPredmet.TabIndex = 9;
@@ -112,7 +112,7 @@
             cmbSemestar.FlatStyle = FlatStyle.Flat;
             cmbSemestar.ForeColor = Color.Black;
             cmbSemestar.FormattingEnabled = true;
-            cmbSemestar.Location = new Point(182, 81);
+            cmbSemestar.Location = new Point(167, 73);
             cmbSemestar.Name = "cmbSemestar";
             cmbSemestar.Size = new Size(83, 23);
             cmbSemestar.TabIndex = 8;
@@ -124,7 +124,7 @@
             cmbGodina.FlatStyle = FlatStyle.Flat;
             cmbGodina.ForeColor = Color.Black;
             cmbGodina.FormattingEnabled = true;
-            cmbGodina.Location = new Point(40, 81);
+            cmbGodina.Location = new Point(25, 73);
             cmbGodina.Name = "cmbGodina";
             cmbGodina.Size = new Size(136, 23);
             cmbGodina.TabIndex = 7;
@@ -138,19 +138,19 @@
             dgvSesijePredmet.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSesijePredmet.Columns.AddRange(new DataGridViewColumn[] { Naziv, Start, Finish, Trajanje });
             dgvSesijePredmet.GridColor = Color.FromArgb(224, 224, 224);
-            dgvSesijePredmet.Location = new Point(40, 119);
+            dgvSesijePredmet.Location = new Point(25, 119);
             dgvSesijePredmet.Name = "dgvSesijePredmet";
             dgvSesijePredmet.ReadOnly = true;
-            dgvSesijePredmet.Size = new Size(684, 150);
+            dgvSesijePredmet.Size = new Size(717, 150);
             dgvSesijePredmet.TabIndex = 13;
             // 
             // Naziv
             // 
+            Naziv.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Naziv.DataPropertyName = "Naziv";
             Naziv.HeaderText = "Naziv";
             Naziv.Name = "Naziv";
             Naziv.ReadOnly = true;
-            Naziv.Width = 341;
             // 
             // Start
             // 
@@ -177,7 +177,8 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label1.Location = new Point(40, 34);
+            label1.ForeColor = Color.SteelBlue;
+            label1.Location = new Point(25, 23);
             label1.Name = "label1";
             label1.Size = new Size(157, 21);
             label1.TabIndex = 14;
@@ -187,7 +188,8 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label5.Location = new Point(40, 337);
+            label5.ForeColor = Color.SteelBlue;
+            label5.Location = new Point(25, 337);
             label5.Name = "label5";
             label5.Size = new Size(153, 21);
             label5.TabIndex = 15;
@@ -201,10 +203,10 @@
             dgvSesijeSedmica.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSesijeSedmica.Columns.AddRange(new DataGridViewColumn[] { NazivSedmica, PredmetSedmica, StartSedmica, FinishSedmica, TrajanjeSedmica });
             dgvSesijeSedmica.GridColor = Color.FromArgb(224, 224, 224);
-            dgvSesijeSedmica.Location = new Point(40, 361);
+            dgvSesijeSedmica.Location = new Point(25, 361);
             dgvSesijeSedmica.Name = "dgvSesijeSedmica";
             dgvSesijeSedmica.ReadOnly = true;
-            dgvSesijeSedmica.Size = new Size(684, 150);
+            dgvSesijeSedmica.Size = new Size(717, 150);
             dgvSesijeSedmica.TabIndex = 16;
             // 
             // NazivSedmica
@@ -247,7 +249,8 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label6.Location = new Point(40, 581);
+            label6.ForeColor = Color.SteelBlue;
+            label6.Location = new Point(25, 581);
             label6.Name = "label6";
             label6.Size = new Size(148, 21);
             label6.TabIndex = 17;
@@ -261,10 +264,10 @@
             dgvSesijeMjesec.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSesijeMjesec.Columns.AddRange(new DataGridViewColumn[] { NazivMjesec, PredmetMjesec, StartMjesec, FinishMjesec, TrajanjeMjesec });
             dgvSesijeMjesec.GridColor = Color.FromArgb(224, 224, 224);
-            dgvSesijeMjesec.Location = new Point(40, 605);
+            dgvSesijeMjesec.Location = new Point(25, 605);
             dgvSesijeMjesec.Name = "dgvSesijeMjesec";
             dgvSesijeMjesec.ReadOnly = true;
-            dgvSesijeMjesec.Size = new Size(684, 150);
+            dgvSesijeMjesec.Size = new Size(717, 150);
             dgvSesijeMjesec.TabIndex = 18;
             // 
             // NazivMjesec
@@ -338,7 +341,7 @@
             // 
             btnSve.BackColor = Color.SteelBlue;
             btnSve.ForeColor = Color.White;
-            btnSve.Location = new Point(626, 23);
+            btnSve.Location = new Point(644, 23);
             btnSve.Name = "btnSve";
             btnSve.Size = new Size(98, 32);
             btnSve.TabIndex = 22;
@@ -377,7 +380,7 @@
             // 
             button1.BackColor = Color.SteelBlue;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(522, 23);
+            button1.Location = new Point(540, 23);
             button1.Name = "button1";
             button1.Size = new Size(98, 32);
             button1.TabIndex = 26;
@@ -452,10 +455,10 @@
         private Label lblUkupnoPredmet;
         private Label lblSedmicnoUkupno;
         private Label lblMjesecUkupno;
+        private Button button1;
         private DataGridViewTextBoxColumn Naziv;
         private DataGridViewTextBoxColumn Start;
         private DataGridViewTextBoxColumn Finish;
         private DataGridViewTextBoxColumn Trajanje;
-        private Button button1;
     }
 }
