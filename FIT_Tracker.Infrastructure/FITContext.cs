@@ -17,7 +17,7 @@ namespace FIT_Tracker.Infrastructure
         {
             optionsBuilder.UseSqlite(konekcijskiString);
         }
-        
+
         public DbSet<GodinaStudija> GodinaStudija { get; set; }
 
         public DbSet<Semestar> Semestri { get; set; }
@@ -29,9 +29,9 @@ namespace FIT_Tracker.Infrastructure
         public DbSet<Target> Target { get; set; }
 
 
-        public void DodajNotifikaciju(string poruka,DateTime vrijeme)
+        public void DodajNotifikaciju(string poruka, DateTime vrijeme)
         {
-            var db=new FITContext();
+            var db = new FITContext();
 
             Notifikacija novanotifikacija = new Notifikacija()
             {
@@ -43,6 +43,8 @@ namespace FIT_Tracker.Infrastructure
             db.SaveChanges();
 
         }
+
+     
 
 
 

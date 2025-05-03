@@ -52,7 +52,8 @@ namespace FIT_Tracker.App
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
             lblPredmet.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-            lblPredmet.ForeColor = Color.SteelBlue;
+            lblPredmet.ForeColor = Color.DarkSlateGray;
+
             lblPredmet.BackColor = Color.Transparent;
 
            
@@ -70,8 +71,8 @@ namespace FIT_Tracker.App
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderColor = Color.SteelBlue;
                 btn.FlatAppearance.BorderSize = 1;
-                btn.BackColor = Color.Transparent;
-                btn.ForeColor = Color.White;
+                btn.BackColor = Color.LightSteelBlue;
+                btn.ForeColor = Color.DarkSlateGray;
                 btn.Cursor = Cursors.Hand;
             }
         }
@@ -91,8 +92,8 @@ namespace FIT_Tracker.App
 
             lblTimer.Text = vrijeme;
             lblTimer.Font = new Font("Segoe UI", 28, FontStyle.Bold);
-            lblTimer.ForeColor = Aktivna ? Color.Red : Color.LightGray;
-            lblTimer.BackColor = Color.SteelBlue;
+            lblTimer.ForeColor = Aktivna ? Color.Crimson : Color.DimGray;
+            lblTimer.BackColor = Color.White; 
             lblTimer.TextAlign = ContentAlignment.MiddleCenter;
         }
 
@@ -106,10 +107,10 @@ namespace FIT_Tracker.App
         protected override void OnPaint(PaintEventArgs e)
         {
             using var brush = new LinearGradientBrush(
-                ClientRectangle,
-                Color.White,
-                Color.SteelBlue,
-                LinearGradientMode.Vertical);
+            ClientRectangle,
+            Color.WhiteSmoke,
+            Color.SteelBlue,
+            LinearGradientMode.Vertical);
 
             e.Graphics.FillRectangle(brush, ClientRectangle);
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
@@ -139,15 +140,15 @@ namespace FIT_Tracker.App
         private void btnZapocni_MouseEnter(object sender, EventArgs e)
         {
             var btn = (Button)sender;
-            btn.BackColor = Color.FromArgb(70, Color.White);
-            btn.ForeColor = Color.Black;
+            btn.BackColor = Color.White;
+            btn.ForeColor = Color.SteelBlue;
         }
 
         private void btnStart_MouseLeave(object sender, EventArgs e)
         {
             var btn = (Button)sender;
-            btn.BackColor = Color.Transparent;
-            btn.ForeColor = Color.White;
+            btn.BackColor = Color.LightSteelBlue;
+            btn.ForeColor = Color.DarkSlateGray;
         }
 
 
