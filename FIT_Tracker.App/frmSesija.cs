@@ -197,7 +197,7 @@ namespace FIT_Tracker.App
 
             var nova = new Sesija
             {
-                Naziv = naziv,
+                Naziv = naziv.Replace(" ", "_"),
                 PredmetId = predmet?.Id ?? 0,
                 Trajanje = trajanjeFormatted,
                 Start = startTime,
@@ -209,13 +209,19 @@ namespace FIT_Tracker.App
 
             var target = _context.Target.FirstOrDefault(t => t.PredmetId == predmet.Id);
 
+            //if (target == null)
+            //{
+            //    MessageBox.Show("Target nije definisan za ovaj predmet.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+
             var trajanja = _context.Sesije
-              .Where(x => x.PredmetId == predmet.Id)
-              .AsEnumerable() 
-              .Select(x => ParseTrajanje(x.Trajanje))
-              .Where(x => x != null)
-              .Select(x => x.Value)
-              .ToList();
+                .Where(x => x.PredmetId == predmet.Id)
+                .AsEnumerable()
+                .Select(x => ParseTrajanje(x.Trajanje))
+                .Where(x => x != null)
+                .Select(x => x.Value)
+                .ToList();
 
             TimeSpan ukupno = TimeSpan.FromSeconds(trajanja.Sum());
             target.TrenutnoVrijeme = ukupno;
@@ -225,9 +231,8 @@ namespace FIT_Tracker.App
             {
                 MessageBox.Show(" Ispunili ste target za ovaj predmet!\nSpremni ste za ispit! ", "Cilj postignut", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
         }
+
 
         private int? ParseTrajanje(string trajanje)
         {

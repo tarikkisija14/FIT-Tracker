@@ -111,6 +111,7 @@
             Font = new Font("Segoe UI", 9F);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmSesija";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Nova sesija";
             Load += frmSesija_Load;
             ResumeLayout(false);

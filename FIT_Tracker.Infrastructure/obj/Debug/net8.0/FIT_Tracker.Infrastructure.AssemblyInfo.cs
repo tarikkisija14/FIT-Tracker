@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIT_Tracker.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fa223daea8533b8d5c98147cb9d86e224331b2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6aaaf93ff16768c91f42afd05e3bae9f93b4178")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIT_Tracker.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIT_Tracker.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
