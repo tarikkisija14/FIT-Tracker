@@ -107,6 +107,7 @@
             Controls.Add(btnDodaj);
             Controls.Add(btnOtkazi);
             Name = "frmNovaNotifikacija";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Nova Notifikacija";
             ResumeLayout(false);
             PerformLayout();

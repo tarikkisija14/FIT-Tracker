@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIT_Timer.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6aaaf93ff16768c91f42afd05e3bae9f93b4178")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b13ddb20cd6758a91074a8201107851d19ce6d14")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIT_Timer.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIT_Timer.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

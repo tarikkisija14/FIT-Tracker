@@ -115,6 +115,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "frmAbout";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "O aplikaciji";
             Load += frmAbout_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

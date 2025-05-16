@@ -147,6 +147,7 @@
             Controls.Add(cbNotifikacije);
             Controls.Add(lblNaziv);
             Name = "frmNotifikacije";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Notifikacije";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -182,6 +182,7 @@
             Controls.Add(cmbSemestar);
             Controls.Add(cmbPredmet);
             Name = "frmTarget";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Target";
             Load += frmTarget_Load;
             ((System.ComponentModel.ISupportInitialize)BrojSati).EndInit();

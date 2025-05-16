@@ -50,6 +50,7 @@
             ClientSize = new Size(883, 502);
             Controls.Add(dgvTargeti);
             Name = "frmPregledTargeta";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPregledTargeta";
             Load += frmPregledTargeta_Load;
             ((System.ComponentModel.ISupportInitialize)dgvTargeti).EndInit();

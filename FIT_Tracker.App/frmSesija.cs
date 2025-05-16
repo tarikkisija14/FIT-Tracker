@@ -190,15 +190,21 @@ namespace FIT_Tracker.App
 
         private void SpremiSesiju(string naziv)
         {
+            if (predmet == null)
+            {
+                MessageBox.Show("Nijedan predmet nije selektovan. Sesija se ne može sačuvati.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string trajanjeFormatted =
-                 trajanje.Hours > 0 ? $"{trajanje.Hours}h {trajanje.Minutes:D2}m {trajanje.Seconds:D2}s" :
-                 trajanje.Minutes > 0 ? $"{trajanje.Minutes}m {trajanje.Seconds:D2}s" :
-                 $"{trajanje.Seconds}s";
+                trajanje.Hours > 0 ? $"{trajanje.Hours}h {trajanje.Minutes:D2}m {trajanje.Seconds:D2}s" :
+                trajanje.Minutes > 0 ? $"{trajanje.Minutes}m {trajanje.Seconds:D2}s" :
+                $"{trajanje.Seconds}s";
 
             var nova = new Sesija
             {
                 Naziv = naziv.Replace(" ", "_"),
-                PredmetId = predmet?.Id ?? 0,
+                PredmetId = predmet.Id,
                 Trajanje = trajanjeFormatted,
                 Start = startTime,
                 Finish = DateTime.Now
@@ -209,11 +215,11 @@ namespace FIT_Tracker.App
 
             var target = _context.Target.FirstOrDefault(t => t.PredmetId == predmet.Id);
 
-            //if (target == null)
-            //{
-            //    MessageBox.Show("Target nije definisan za ovaj predmet.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
+            if (target == null)
+            {
+                MessageBox.Show("Target nije definisan za ovaj predmet.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             var trajanja = _context.Sesije
                 .Where(x => x.PredmetId == predmet.Id)
@@ -232,6 +238,7 @@ namespace FIT_Tracker.App
                 MessageBox.Show(" Ispunili ste target za ovaj predmet!\nSpremni ste za ispit! ", "Cilj postignut", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
 
         private int? ParseTrajanje(string trajanje)

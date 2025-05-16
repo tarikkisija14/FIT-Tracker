@@ -87,6 +87,7 @@
             Controls.Add(txtNaziv);
             Controls.Add(label1);
             Name = "frmNazivSesije";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Nazovite sesiju";
             Load += frmNazivSesije_Load;
             ResumeLayout(false);

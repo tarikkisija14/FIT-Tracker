@@ -95,6 +95,7 @@
             ClientSize = new Size(906, 522);
             Controls.Add(dgvSveSesije);
             Name = "frmSveSesije";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Sve sesije";
             Load += frmSveSesije_Load;
             ((System.ComponentModel.ISupportInitialize)dgvSveSesije).EndInit();

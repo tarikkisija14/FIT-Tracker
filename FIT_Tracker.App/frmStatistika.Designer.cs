@@ -415,6 +415,7 @@
             Controls.Add(cmbSemestar);
             Controls.Add(cmbGodina);
             Name = "frmStatistika";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Statistika";
             Load += frmStatistika_Load;
             ((System.ComponentModel.ISupportInitialize)dgvSesijePredmet).EndInit();
