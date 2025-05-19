@@ -244,7 +244,8 @@ namespace FIT_Tracker.App
         private void UcitajSedmicnePodatke()
         {
             DateTime danas = DateTime.Now;
-            DateTime pocetakSedmice = danas.AddDays(-(int)danas.DayOfWeek + 1); // Pon
+            int diff = (7 + (danas.DayOfWeek - DayOfWeek.Monday)) % 7;
+            DateTime pocetakSedmice = danas.AddDays(-diff).Date;
 
             var sedmicneSesije = _context.Sesije
                 .Where(x => x.Start >= pocetakSedmice && x.Start <= danas)

@@ -51,9 +51,9 @@
             lblNaziv.ForeColor = Color.SteelBlue;
             lblNaziv.Location = new Point(20, 9);
             lblNaziv.Name = "lblNaziv";
-            lblNaziv.Size = new Size(113, 25);
+            lblNaziv.Size = new Size(98, 25);
             lblNaziv.TabIndex = 0;
-            lblNaziv.Text = "Notifikacije";
+            lblNaziv.Text = "Obavijesti";
             lblNaziv.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lstNotifikacije
