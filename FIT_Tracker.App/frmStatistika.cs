@@ -146,7 +146,10 @@ namespace FIT_Tracker.App
         private void PrikaziUkupnoSedmica()
         {
             DateTime danas = DateTime.Now;
-            DateTime pocetakSedmice = danas.AddDays(-(int)danas.DayOfWeek + 1); // Pon
+
+            
+            int danUSedmici = ((int)danas.DayOfWeek + 6) % 7; 
+            DateTime pocetakSedmice = danas.Date.AddDays(-danUSedmici); 
 
             var sedmicneSesije = _context.Sesije
                 .Where(x => x.Start >= pocetakSedmice && x.Start <= danas)
@@ -178,10 +181,12 @@ namespace FIT_Tracker.App
             }
         }
 
+
         private void PrikaziProsjekSedmica()
         {
             DateTime danas = DateTime.Now;
-            DateTime pocetakSedmice = danas.AddDays(-(int)danas.DayOfWeek + 1); // Pon
+            int danUSedmici = ((int)danas.DayOfWeek + 6) % 7; // Ponedjeljak=0
+            DateTime pocetakSedmice = danas.Date.AddDays(-danUSedmici); // Pravi ponedjeljak
 
             var sedmicneSesije = _context.Sesije
                 .Where(x => x.Start >= pocetakSedmice && x.Start <= danas)
