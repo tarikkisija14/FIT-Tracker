@@ -145,7 +145,7 @@
             // 
             pictureBox2.BackgroundImageLayout = ImageLayout.Center;
             pictureBox2.Image = Properties.Resources.play;
-            pictureBox2.Location = new Point(100, 233);
+            pictureBox2.Location = new Point(88, 238);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(138, 107);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;

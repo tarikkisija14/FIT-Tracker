@@ -1,5 +1,6 @@
 ﻿using FIT_Timer.Data;
 using FIT_Tracker.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -238,7 +239,7 @@ namespace FIT_Tracker.App
             int trenutniMjesec = danas.Month;
             int trenutnaGodina = danas.Year;
 
-            var mjesecneSesije = _context.Sesije
+            var mjesecneSesije = _context.Sesije.Include(x=>x.Predmet)
                 .Where(x => x.Start.Month == trenutniMjesec && x.Start.Year == trenutnaGodina)
                 .ToList();
 
@@ -252,7 +253,7 @@ namespace FIT_Tracker.App
             int diff = (7 + (danas.DayOfWeek - DayOfWeek.Monday)) % 7;
             DateTime pocetakSedmice = danas.AddDays(-diff).Date;
 
-            var sedmicneSesije = _context.Sesije
+            var sedmicneSesije = _context.Sesije.Include(x=>x.Predmet)
                 .Where(x => x.Start >= pocetakSedmice && x.Start <= danas)
                 .ToList();
 
