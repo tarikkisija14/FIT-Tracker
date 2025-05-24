@@ -130,13 +130,13 @@ namespace FIT_Tracker.App
             if (trajanja.Count > 0)
             {
                 double prosjecnoTrajanje = trajanja.Average();
-                int minute = (int)(prosjecnoTrajanje / 60);
-                int sekunde = (int)(prosjecnoTrajanje % 60);
+                double minute = Math.Floor(prosjecnoTrajanje / 60.0);
+                double sekunde = prosjecnoTrajanje % 60.0;
 
                 if (minute > 0)
-                    lblMjesec.Text = $"Prosječno vrijeme (mjesec): {minute}m {sekunde:D2}s";
+                    lblMjesec.Text = $"Prosječno vrijeme (mjesec): {minute}m {sekunde:F1}s";
                 else
-                    lblMjesec.Text = $"Prosječno vrijeme (mjesec): {sekunde}s";
+                    lblMjesec.Text = $"Prosječno vrijeme (mjesec): {sekunde:F1}s";
             }
             else
             {
@@ -186,8 +186,8 @@ namespace FIT_Tracker.App
         private void PrikaziProsjekSedmica()
         {
             DateTime danas = DateTime.Now;
-            int danUSedmici = ((int)danas.DayOfWeek + 6) % 7; // Ponedjeljak=0
-            DateTime pocetakSedmice = danas.Date.AddDays(-danUSedmici); // Pravi ponedjeljak
+            int danUSedmici = ((int)danas.DayOfWeek + 6) % 7; 
+            DateTime pocetakSedmice = danas.Date.AddDays(-danUSedmici); 
 
             var sedmicneSesije = _context.Sesije
                 .Where(x => x.Start >= pocetakSedmice && x.Start <= danas)
@@ -202,8 +202,8 @@ namespace FIT_Tracker.App
             if (trajanja.Count > 0)
             {
                 double prosjecnoTrajanje = trajanja.Average();
-                int minute = (int)(prosjecnoTrajanje / 60);
-                int sekunde = (int)(prosjecnoTrajanje % 60);
+                double minute = Math.Floor(prosjecnoTrajanje / 60.0);
+                double sekunde = prosjecnoTrajanje % 60.0;
 
                 if (minute > 0)
                     lblSedmicno.Text = $"Prosječno vrijeme (sedmica): {minute}m {sekunde:D2}s";
