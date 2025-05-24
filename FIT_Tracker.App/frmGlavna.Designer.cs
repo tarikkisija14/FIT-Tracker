@@ -87,7 +87,7 @@
             cmbSemestar.FormattingEnabled = true;
             cmbSemestar.Location = new Point(157, 130);
             cmbSemestar.Name = "cmbSemestar";
-            cmbSemestar.Size = new Size(134, 29);
+            cmbSemestar.Size = new Size(154, 29);
             cmbSemestar.TabIndex = 2;
             cmbSemestar.SelectedIndexChanged += cmbSemestar_SelectedIndexChanged;
             // 
@@ -101,7 +101,7 @@
             cmbPredmet.FormattingEnabled = true;
             cmbPredmet.Location = new Point(29, 182);
             cmbPredmet.Name = "cmbPredmet";
-            cmbPredmet.Size = new Size(262, 29);
+            cmbPredmet.Size = new Size(282, 29);
             cmbPredmet.TabIndex = 3;
             // 
             // label2
@@ -145,9 +145,9 @@
             // 
             pictureBox2.BackgroundImageLayout = ImageLayout.Center;
             pictureBox2.Image = Properties.Resources.play;
-            pictureBox2.Location = new Point(88, 238);
+            pictureBox2.Location = new Point(100, 231);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(138, 107);
+            pictureBox2.Size = new Size(138, 138);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
@@ -203,7 +203,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(335, 458);
+            ClientSize = new Size(339, 458);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
