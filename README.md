@@ -7,3 +7,6 @@ Start/Pauza/Završi Sesiju: Korisnici mogu započeti novu sesiju učenja, pauzir
 Pohranjivanje Sesija: Svaka sesija koja se završi pohranjuje svoje trajanje u bazu podataka.
 Praćenje Predmeta: Korisnici mogu pratiti koliko su vremena proveli na određenim predmetima.
 Izbor Predmeta: Svaka sesija učenja može biti vezana za specifičan predmet (npr. Programiranje,Baze podataka)
+
+Download verzija 1.0
+https://www.mediafire.com/file/vxsjgkzsr8vtpth/FiT_Tracker_1.0.rar/file
