@@ -1,12 +1,35 @@
-# FIT-Tracker
+<h1 align="center">📚 Fit Tracker</h1>
 
-FIT Tracker je WinForms aplikacija dizajnirana za praćenje vremena provedenog u učenju. Program omogućava korisnicima da prate koliko vremena su proveli na određenim predmetima, semestrima i godinama studija. Aplikacija sadrži funkcionalnost za pokretanje, pauzu i završavanje sesija učenja, a sve sesije se pohranjuju u bazu podataka.
+<p align="center">
+  A Windows Forms C# application for tracking study sessions of FIT (Faculty of Information Technologies) students.  
+  Manage, monitor, and analyze your learning progress with built-in statistics, targets, and notifications.  
+  Powered by <strong>SQLite</strong> for data storage.
+</p>
 
-Glavne Funkcionalnosti
-Start/Pauza/Završi Sesiju: Korisnici mogu započeti novu sesiju učenja, pauzirati je i završiti kad god žele.
-Pohranjivanje Sesija: Svaka sesija koja se završi pohranjuje svoje trajanje u bazu podataka.
-Praćenje Predmeta: Korisnici mogu pratiti koliko su vremena proveli na određenim predmetima.
-Izbor Predmeta: Svaka sesija učenja može biti vezana za specifičan predmet (npr. Programiranje,Baze podataka)
+---
+
+## 📌 Features
+
+✅ **Start / Pause / Resume Study Sessions** – log your learning in real time  
+✅ **SQLite Database Integration** – store all sessions locally  
+✅ **Statistics Dashboard** – weekly, monthly, and per-subject session stats  
+✅ **Subject Targets** – set study goals for each subject  
+✅ **Study Insights** – analyze patterns and trends in your learning  
+✅ **Notifications** – reminders and progress updates  
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer          | Technology |
+|----------------|------------|
+| **Frontend**   | WinForms (.NET C#) |
+| **Backend**    | .NET Framework / .NET 6+ |
+| **Database**   | SQLite |
+| **Data Analysis** | Custom statistical algorithms |
+| **Notifications** | Windows Toast Notifications |
+
+---
 
 Download verzija 1.0
 https://www.mediafire.com/file/vxsjgkzsr8vtpth/FiT_Tracker_1.0.rar/file
