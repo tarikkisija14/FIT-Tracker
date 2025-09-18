@@ -32,20 +32,23 @@
 ---
 ## 📸 Screenshots
 
+## 📸 Screenshots
+
 <p align="center">
-  <img src="https://i.imgur.com/7JiDvFf.png" width="600"><br>
+  <img src="images/start.png" width="600"><br>
   <em>Startna forma</em>
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/lorDTat.png" width="600"><br>
+  <img src="images/sesija.png" width="600"><br>
   <em>Aktivna sesija</em>
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/VL8DJo9.png" width="600"><br>
+  <img src="images/stats.png" width="600"><br>
   <em>Statistika</em>
 </p>
+
 ---
 
 Download verzija 1.0
